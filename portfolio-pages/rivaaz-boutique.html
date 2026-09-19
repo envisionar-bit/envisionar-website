@@ -1,0 +1,113 @@
+<div id="env-rivaaz-boutique">
+<style>
+#env-rivaaz-boutique{
+--ink:#101010;--paper:#FFFFFF;--tint:#F5F5F3;--line:#E4E3DF;--line-strong:#CFCEC8;--muted:#77746C;
+--accent:#A08A47;--accent-ink:#FFFFFF;
+--font-display:"Fraunces","Georgia",serif;--font-sans:"Inter","Helvetica Neue",Arial,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;
+display:block;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:15px;line-height:1.6;text-align:left;
+}
+#env-rivaaz-boutique *{box-sizing:border-box}
+#env-rivaaz-boutique div,#env-rivaaz-boutique p,#env-rivaaz-boutique span,#env-rivaaz-boutique a,#env-rivaaz-boutique img,#env-rivaaz-boutique dl,#env-rivaaz-boutique dt,#env-rivaaz-boutique dd,#env-rivaaz-boutique h1,#env-rivaaz-boutique h2,#env-rivaaz-boutique h3,#env-rivaaz-boutique figure,#env-rivaaz-boutique figcaption,#env-rivaaz-boutique nav,#env-rivaaz-boutique header,#env-rivaaz-boutique footer,#env-rivaaz-boutique section,#env-rivaaz-boutique button{font-family:inherit;font-size:inherit;line-height:inherit;color:inherit;margin:0;padding:0;border:0;background:none}
+#env-rivaaz-boutique img{max-width:100%;height:auto;display:block}
+#env-rivaaz-boutique a{color:inherit;text-decoration:none}
+#env-rivaaz-boutique h1,#env-rivaaz-boutique h2,#env-rivaaz-boutique h3{font-family:var(--font-display);font-weight:500;letter-spacing:-0.01em;line-height:1.15}
+#env-rivaaz-boutique .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;font-family:var(--font-sans)}
+#env-rivaaz-boutique .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+#env-rivaaz-boutique section{padding:64px 0;border-top:1px solid var(--line)}
+#env-rivaaz-boutique section:first-of-type{border-top:none}
+#env-rivaaz-boutique .head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:62ch}
+#env-rivaaz-boutique nav.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#env-rivaaz-boutique nav.top .inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+#env-rivaaz-boutique nav.top .brand{font-family:var(--font-display);font-size:16px;font-weight:600}
+#env-rivaaz-boutique nav.top .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+#env-rivaaz-boutique nav.top a.navlink{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+#env-rivaaz-boutique nav.top a.navlink:hover{color:var(--accent-ink)}
+#env-rivaaz-boutique header.hero{background:var(--accent);color:var(--accent-ink);padding:72px 0}
+#env-rivaaz-boutique header.hero .cat{color:var(--accent-ink);opacity:.72}
+#env-rivaaz-boutique header.hero h1{font-size:44px;margin-top:10px}
+#env-rivaaz-boutique header.hero .tagline{font-family:var(--font-display);font-style:italic;font-size:20px;margin-top:16px;max-width:44ch;opacity:.92}
+#env-rivaaz-boutique header.hero .desc{margin-top:18px;max-width:56ch;opacity:.85;font-size:15px}
+#env-rivaaz-boutique .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;border:1px solid var(--line)}
+#env-rivaaz-boutique .swatches button{cursor:pointer;height:120px;padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-family:var(--font-mono);font-size:12px;width:100%;border-right:1px solid rgba(0,0,0,.06)}
+#env-rivaaz-boutique .swatches span.n{display:block;font-size:10px;opacity:.75}
+#env-rivaaz-boutique .copied{font-size:13px;color:var(--muted);min-height:20px;margin-top:14px}
+#env-rivaaz-boutique .note{font-size:13px;color:var(--muted);margin-top:14px;max-width:60ch}
+#env-rivaaz-boutique .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+#env-rivaaz-boutique .gallery figure{margin:0;cursor:zoom-in;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
+#env-rivaaz-boutique .gallery img{width:100%;height:auto;display:block;transition:transform .3s ease}
+#env-rivaaz-boutique .gallery figure:hover img{transform:scale(1.04)}
+#env-rivaaz-boutique .lightbox{position:fixed;inset:0;z-index:999999;display:none;background:rgba(16,16,16,.9);align-items:center;justify-content:center;padding:32px}
+#env-rivaaz-boutique .lightbox.open{display:flex}
+#env-rivaaz-boutique .lightbox img{max-width:min(1100px,92vw);max-height:88vh;width:auto;height:auto;margin:0 auto}
+#env-rivaaz-boutique .lightbox .close{position:absolute;top:24px;right:32px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+#env-rivaaz-boutique .lockup-frame{display:flex;align-items:center;justify-content:center;min-height:360px;padding:48px;background:var(--tint);border:1px solid var(--line)}
+#env-rivaaz-boutique .lockup-frame img{max-width:78%;max-height:300px;margin:0 auto}
+#env-rivaaz-boutique footer{background:var(--ink);color:rgba(255,255,255,.72);padding:48px 0}
+#env-rivaaz-boutique footer .grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+#env-rivaaz-boutique footer strong{color:#fff;font-weight:600}
+#env-rivaaz-boutique footer .mono{font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.5);margin-top:10px}
+@media(max-width:720px){#env-rivaaz-boutique .wrap{padding:0 20px}#env-rivaaz-boutique nav.top .inner{padding:14px 20px}#env-rivaaz-boutique header.hero h1{font-size:32px}}
+</style>
+<nav class="top"><div class="inner"><span class="brand">Rivaaz Boutique</span><div class="navlinks">
+<a class="navlink" href="#env-rivaaz-boutique-identity">Identity</a><a class="navlink" href="#env-rivaaz-boutique-colour">Colour</a><a class="navlink" href="#env-rivaaz-boutique-gallery">Collateral</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow cat">Fashion retail / stationery design</p>
+<h1>Rivaaz Boutique</h1>
+
+<p class="desc">Stationery and swing-tag design for Rivaaz Boutique, a Nagpur fashion boutique, in a black and gold palette built around a line-drawn gown illustration.</p>
+</div></header>
+
+<section id="env-rivaaz-boutique-identity"><div class="wrap">
+<div class="head"><p class="eyebrow">Identity</p><h2 style="font-size:24px">Mark &amp; lockup</h2></div>
+<div class="lockup-frame"><img src="../images/envisionar-rivaaz-boutique-swing-tag-front-back.jpg" alt="Rivaaz Boutique identity board"></div>
+</div></section>
+
+<section id="env-rivaaz-boutique-colour" style="background:var(--tint)"><div class="wrap">
+<div class="head"><p class="eyebrow">Colour</p><h2 style="font-size:24px">Palette</h2></div>
+<div class="swatches"><button data-hex="#A08A47" style="background:#A08A47;color:#FFFFFF"><span class="n">Swatch 1</span>#A08A47</button><button data-hex="#31231A" style="background:#31231A;color:#FFFFFF"><span class="n">Swatch 2</span>#31231A</button><button data-hex="#868580" style="background:#868580;color:#FFFFFF"><span class="n">Swatch 3</span>#868580</button><button data-hex="#7E6335" style="background:#7E6335;color:#FFFFFF"><span class="n">Swatch 4</span>#7E6335</button><button data-hex="#5A3B23" style="background:#5A3B23;color:#FFFFFF"><span class="n">Swatch 5</span>#5A3B23</button></div>
+<p class="copied" data-copied>Click a swatch to copy its hex.</p>
+<p class="note">Colours sampled from the identity artwork above (top panel).</p>
+</div></section>
+
+<section id="env-rivaaz-boutique-gallery"><div class="wrap">
+<div class="head"><p class="eyebrow">Collateral</p><h2 style="font-size:24px">Deliverables</h2><p class="note">Click any image to view it full size.</p></div>
+<div class="gallery"><figure data-src="../images/envisionar-rivaaz-boutique-swing-tag-front-back.jpg" data-cap="Swing tag — front and back"><img src="../images/envisionar-rivaaz-boutique-swing-tag-front-back.jpg" alt="Swing tag — front and back" loading="lazy"></figure><figure data-src="../images/envisionar-rivaaz-boutique-letterhead.jpg" data-cap="Letterhead"><img src="../images/envisionar-rivaaz-boutique-letterhead.jpg" alt="Letterhead" loading="lazy"></figure><figure data-src="../images/envisionar-rivaaz-boutique-envelope.jpg" data-cap="Envelope"><img src="../images/envisionar-rivaaz-boutique-envelope.jpg" alt="Envelope" loading="lazy"></figure><figure data-src="../images/envisionar-rivaaz-boutique-visiting-card.jpg" data-cap="Visiting card"><img src="../images/envisionar-rivaaz-boutique-visiting-card.jpg" alt="Visiting card" loading="lazy"></figure></div>
+</div></section>
+
+<div class="lightbox"><button class="close" aria-label="Close">&times;</button><img alt=""></div>
+
+<footer><div class="wrap"><div class="grid">
+<div><strong>Rivaaz Boutique</strong><div class="mono">Brand identity by Envisionar</div></div>
+<div style="text-align:right;font-size:13px;line-height:1.8;color:rgba(255,255,255,.6)">
+<div>Identity design by <strong>Prof. Bhuleshwar Mate (Arun)</strong></div><div>Digitalized and Brand Images by <strong>Ms. Kaushambi Mate</strong></div><div>Copyright <strong>Envisionar</strong></div>
+</div>
+</div></div></footer>
+</div>
+
+<script>
+(function(){
+var root = document.getElementById('env-rivaaz-boutique');
+var lb = root.querySelector('.lightbox');
+var lbImg = lb.querySelector('img');
+root.querySelectorAll('.gallery figure').forEach(function(fig){
+  fig.addEventListener('click', function(){
+    lbImg.src = fig.getAttribute('data-src');
+    lbImg.alt = fig.getAttribute('data-cap');
+    lb.classList.add('open');
+  });
+});
+lb.querySelector('.close').addEventListener('click', function(){ lb.classList.remove('open'); });
+lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+var out = root.querySelector('[data-copied]');
+root.querySelectorAll('.swatches button').forEach(function(b){
+  b.addEventListener('click', function(){
+    var hex = b.getAttribute('data-hex');
+    if (navigator.clipboard) { navigator.clipboard.writeText(hex).then(function(){ out.textContent = hex + ' copied to clipboard'; }, function(){ out.textContent = hex; }); }
+    else { out.textContent = hex; }
+  });
+});
+})();
+</script>

@@ -1,0 +1,113 @@
+<div id="env-shah-furniture">
+<style>
+#env-shah-furniture{
+--ink:#101010;--paper:#FFFFFF;--tint:#F5F5F3;--line:#E4E3DF;--line-strong:#CFCEC8;--muted:#77746C;
+--accent:#FAF2CC;--accent-ink:#141414;
+--font-display:"Fraunces","Georgia",serif;--font-sans:"Inter","Helvetica Neue",Arial,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;
+display:block;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:15px;line-height:1.6;text-align:left;
+}
+#env-shah-furniture *{box-sizing:border-box}
+#env-shah-furniture div,#env-shah-furniture p,#env-shah-furniture span,#env-shah-furniture a,#env-shah-furniture img,#env-shah-furniture dl,#env-shah-furniture dt,#env-shah-furniture dd,#env-shah-furniture h1,#env-shah-furniture h2,#env-shah-furniture h3,#env-shah-furniture figure,#env-shah-furniture figcaption,#env-shah-furniture nav,#env-shah-furniture header,#env-shah-furniture footer,#env-shah-furniture section,#env-shah-furniture button{font-family:inherit;font-size:inherit;line-height:inherit;color:inherit;margin:0;padding:0;border:0;background:none}
+#env-shah-furniture img{max-width:100%;height:auto;display:block}
+#env-shah-furniture a{color:inherit;text-decoration:none}
+#env-shah-furniture h1,#env-shah-furniture h2,#env-shah-furniture h3{font-family:var(--font-display);font-weight:500;letter-spacing:-0.01em;line-height:1.15}
+#env-shah-furniture .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;font-family:var(--font-sans)}
+#env-shah-furniture .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+#env-shah-furniture section{padding:64px 0;border-top:1px solid var(--line)}
+#env-shah-furniture section:first-of-type{border-top:none}
+#env-shah-furniture .head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:62ch}
+#env-shah-furniture nav.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#env-shah-furniture nav.top .inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+#env-shah-furniture nav.top .brand{font-family:var(--font-display);font-size:16px;font-weight:600}
+#env-shah-furniture nav.top .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+#env-shah-furniture nav.top a.navlink{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+#env-shah-furniture nav.top a.navlink:hover{color:var(--accent-ink)}
+#env-shah-furniture header.hero{background:var(--accent);color:var(--accent-ink);padding:72px 0}
+#env-shah-furniture header.hero .cat{color:var(--accent-ink);opacity:.72}
+#env-shah-furniture header.hero h1{font-size:44px;margin-top:10px}
+#env-shah-furniture header.hero .tagline{font-family:var(--font-display);font-style:italic;font-size:20px;margin-top:16px;max-width:44ch;opacity:.92}
+#env-shah-furniture header.hero .desc{margin-top:18px;max-width:56ch;opacity:.85;font-size:15px}
+#env-shah-furniture .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;border:1px solid var(--line)}
+#env-shah-furniture .swatches button{cursor:pointer;height:120px;padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-family:var(--font-mono);font-size:12px;width:100%;border-right:1px solid rgba(0,0,0,.06)}
+#env-shah-furniture .swatches span.n{display:block;font-size:10px;opacity:.75}
+#env-shah-furniture .copied{font-size:13px;color:var(--muted);min-height:20px;margin-top:14px}
+#env-shah-furniture .note{font-size:13px;color:var(--muted);margin-top:14px;max-width:60ch}
+#env-shah-furniture .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+#env-shah-furniture .gallery figure{margin:0;cursor:zoom-in;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
+#env-shah-furniture .gallery img{width:100%;height:auto;display:block;transition:transform .3s ease}
+#env-shah-furniture .gallery figure:hover img{transform:scale(1.04)}
+#env-shah-furniture .lightbox{position:fixed;inset:0;z-index:999999;display:none;background:rgba(16,16,16,.9);align-items:center;justify-content:center;padding:32px}
+#env-shah-furniture .lightbox.open{display:flex}
+#env-shah-furniture .lightbox img{max-width:min(1100px,92vw);max-height:88vh;width:auto;height:auto;margin:0 auto}
+#env-shah-furniture .lightbox .close{position:absolute;top:24px;right:32px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+#env-shah-furniture .lockup-frame{display:flex;align-items:center;justify-content:center;min-height:360px;padding:48px;background:var(--tint);border:1px solid var(--line)}
+#env-shah-furniture .lockup-frame img{max-width:78%;max-height:300px;margin:0 auto}
+#env-shah-furniture footer{background:var(--ink);color:rgba(255,255,255,.72);padding:48px 0}
+#env-shah-furniture footer .grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+#env-shah-furniture footer strong{color:#fff;font-weight:600}
+#env-shah-furniture footer .mono{font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.5);margin-top:10px}
+@media(max-width:720px){#env-shah-furniture .wrap{padding:0 20px}#env-shah-furniture nav.top .inner{padding:14px 20px}#env-shah-furniture header.hero h1{font-size:32px}}
+</style>
+<nav class="top"><div class="inner"><span class="brand">Shah Furniture</span><div class="navlinks">
+<a class="navlink" href="#env-shah-furniture-identity">Identity</a><a class="navlink" href="#env-shah-furniture-colour">Colour</a><a class="navlink" href="#env-shah-furniture-gallery">Collateral</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow cat">Brand identity / stationery design</p>
+<h1>Shah Furniture</h1>
+
+<p class="desc">Logo and stationery suite for Shah Furniture, in a maroon and gold palette, covering letterhead, envelope, notepad, ID card and visiting cards.</p>
+</div></header>
+
+<section id="env-shah-furniture-identity"><div class="wrap">
+<div class="head"><p class="eyebrow">Identity</p><h2 style="font-size:24px">Mark &amp; lockup</h2></div>
+<div class="lockup-frame"><img src="../images/envisionar-shah-furniture-logo.jpg" alt="Shah Furniture identity board"></div>
+</div></section>
+
+<section id="env-shah-furniture-colour" style="background:var(--tint)"><div class="wrap">
+<div class="head"><p class="eyebrow">Colour</p><h2 style="font-size:24px">Palette</h2></div>
+<div class="swatches"><button data-hex="#FAF2CC" style="background:#FAF2CC;color:#141414"><span class="n">Swatch 1</span>#FAF2CC</button><button data-hex="#F3E4A5" style="background:#F3E4A5;color:#141414"><span class="n">Swatch 2</span>#F3E4A5</button><button data-hex="#EBD26C" style="background:#EBD26C;color:#141414"><span class="n">Swatch 3</span>#EBD26C</button><button data-hex="#E4C240" style="background:#E4C240;color:#141414"><span class="n">Swatch 4</span>#E4C240</button></div>
+<p class="copied" data-copied>Click a swatch to copy its hex.</p>
+<p class="note">Colours sampled from the identity artwork above (top panel).</p>
+</div></section>
+
+<section id="env-shah-furniture-gallery"><div class="wrap">
+<div class="head"><p class="eyebrow">Collateral</p><h2 style="font-size:24px">Deliverables</h2><p class="note">Click any image to view it full size.</p></div>
+<div class="gallery"><figure data-src="../images/envisionar-shah-furniture-logo.jpg" data-cap="Shah Furniture — logo"><img src="../images/envisionar-shah-furniture-logo.jpg" alt="Shah Furniture — logo" loading="lazy"></figure><figure data-src="../images/envisionar-shah-furniture-stationery-suite-mockup.jpg" data-cap="Stationery suite — letterhead, envelope, notepad, ID card and cards"><img src="../images/envisionar-shah-furniture-stationery-suite-mockup.jpg" alt="Stationery suite — letterhead, envelope, notepad, ID card and cards" loading="lazy"></figure><figure data-src="../images/envisionar-shah-furniture-visiting-card-raju-shah.jpg" data-cap="Visiting card — Raju Shah"><img src="../images/envisionar-shah-furniture-visiting-card-raju-shah.jpg" alt="Visiting card — Raju Shah" loading="lazy"></figure><figure data-src="../images/envisionar-shah-furniture-visiting-card-chetan-shah.jpg" data-cap="Visiting card — Chetan Shah"><img src="../images/envisionar-shah-furniture-visiting-card-chetan-shah.jpg" alt="Visiting card — Chetan Shah" loading="lazy"></figure></div>
+</div></section>
+
+<div class="lightbox"><button class="close" aria-label="Close">&times;</button><img alt=""></div>
+
+<footer><div class="wrap"><div class="grid">
+<div><strong>Shah Furniture</strong><div class="mono">Brand identity by Envisionar</div></div>
+<div style="text-align:right;font-size:13px;line-height:1.8;color:rgba(255,255,255,.6)">
+<div>Identity design by <strong>Prof. Bhuleshwar Mate (Arun)</strong></div><div>Digitalized and Brand Images by <strong>Ms. Kaushambi Mate</strong></div><div>Copyright <strong>Envisionar</strong></div>
+</div>
+</div></div></footer>
+</div>
+
+<script>
+(function(){
+var root = document.getElementById('env-shah-furniture');
+var lb = root.querySelector('.lightbox');
+var lbImg = lb.querySelector('img');
+root.querySelectorAll('.gallery figure').forEach(function(fig){
+  fig.addEventListener('click', function(){
+    lbImg.src = fig.getAttribute('data-src');
+    lbImg.alt = fig.getAttribute('data-cap');
+    lb.classList.add('open');
+  });
+});
+lb.querySelector('.close').addEventListener('click', function(){ lb.classList.remove('open'); });
+lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+var out = root.querySelector('[data-copied]');
+root.querySelectorAll('.swatches button').forEach(function(b){
+  b.addEventListener('click', function(){
+    var hex = b.getAttribute('data-hex');
+    if (navigator.clipboard) { navigator.clipboard.writeText(hex).then(function(){ out.textContent = hex + ' copied to clipboard'; }, function(){ out.textContent = hex; }); }
+    else { out.textContent = hex; }
+  });
+});
+})();
+</script>

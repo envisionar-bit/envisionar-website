@@ -1,0 +1,113 @@
+<div id="env-strategic-concepts">
+<style>
+#env-strategic-concepts{
+--ink:#101010;--paper:#FFFFFF;--tint:#F5F5F3;--line:#E4E3DF;--line-strong:#CFCEC8;--muted:#77746C;
+--accent:#1979B6;--accent-ink:#FFFFFF;
+--font-display:"Fraunces","Georgia",serif;--font-sans:"Inter","Helvetica Neue",Arial,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;
+display:block;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:15px;line-height:1.6;text-align:left;
+}
+#env-strategic-concepts *{box-sizing:border-box}
+#env-strategic-concepts div,#env-strategic-concepts p,#env-strategic-concepts span,#env-strategic-concepts a,#env-strategic-concepts img,#env-strategic-concepts dl,#env-strategic-concepts dt,#env-strategic-concepts dd,#env-strategic-concepts h1,#env-strategic-concepts h2,#env-strategic-concepts h3,#env-strategic-concepts figure,#env-strategic-concepts figcaption,#env-strategic-concepts nav,#env-strategic-concepts header,#env-strategic-concepts footer,#env-strategic-concepts section,#env-strategic-concepts button{font-family:inherit;font-size:inherit;line-height:inherit;color:inherit;margin:0;padding:0;border:0;background:none}
+#env-strategic-concepts img{max-width:100%;height:auto;display:block}
+#env-strategic-concepts a{color:inherit;text-decoration:none}
+#env-strategic-concepts h1,#env-strategic-concepts h2,#env-strategic-concepts h3{font-family:var(--font-display);font-weight:500;letter-spacing:-0.01em;line-height:1.15}
+#env-strategic-concepts .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;font-family:var(--font-sans)}
+#env-strategic-concepts .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+#env-strategic-concepts section{padding:64px 0;border-top:1px solid var(--line)}
+#env-strategic-concepts section:first-of-type{border-top:none}
+#env-strategic-concepts .head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:62ch}
+#env-strategic-concepts nav.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#env-strategic-concepts nav.top .inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+#env-strategic-concepts nav.top .brand{font-family:var(--font-display);font-size:16px;font-weight:600}
+#env-strategic-concepts nav.top .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+#env-strategic-concepts nav.top a.navlink{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+#env-strategic-concepts nav.top a.navlink:hover{color:var(--accent-ink)}
+#env-strategic-concepts header.hero{background:var(--accent);color:var(--accent-ink);padding:72px 0}
+#env-strategic-concepts header.hero .cat{color:var(--accent-ink);opacity:.72}
+#env-strategic-concepts header.hero h1{font-size:44px;margin-top:10px}
+#env-strategic-concepts header.hero .tagline{font-family:var(--font-display);font-style:italic;font-size:20px;margin-top:16px;max-width:44ch;opacity:.92}
+#env-strategic-concepts header.hero .desc{margin-top:18px;max-width:56ch;opacity:.85;font-size:15px}
+#env-strategic-concepts .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;border:1px solid var(--line)}
+#env-strategic-concepts .swatches button{cursor:pointer;height:120px;padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-family:var(--font-mono);font-size:12px;width:100%;border-right:1px solid rgba(0,0,0,.06)}
+#env-strategic-concepts .swatches span.n{display:block;font-size:10px;opacity:.75}
+#env-strategic-concepts .copied{font-size:13px;color:var(--muted);min-height:20px;margin-top:14px}
+#env-strategic-concepts .note{font-size:13px;color:var(--muted);margin-top:14px;max-width:60ch}
+#env-strategic-concepts .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+#env-strategic-concepts .gallery figure{margin:0;cursor:zoom-in;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
+#env-strategic-concepts .gallery img{width:100%;height:auto;display:block;transition:transform .3s ease}
+#env-strategic-concepts .gallery figure:hover img{transform:scale(1.04)}
+#env-strategic-concepts .lightbox{position:fixed;inset:0;z-index:999999;display:none;background:rgba(16,16,16,.9);align-items:center;justify-content:center;padding:32px}
+#env-strategic-concepts .lightbox.open{display:flex}
+#env-strategic-concepts .lightbox img{max-width:min(1100px,92vw);max-height:88vh;width:auto;height:auto;margin:0 auto}
+#env-strategic-concepts .lightbox .close{position:absolute;top:24px;right:32px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+#env-strategic-concepts .lockup-frame{display:flex;align-items:center;justify-content:center;min-height:360px;padding:48px;background:var(--tint);border:1px solid var(--line)}
+#env-strategic-concepts .lockup-frame img{max-width:78%;max-height:300px;margin:0 auto}
+#env-strategic-concepts footer{background:var(--ink);color:rgba(255,255,255,.72);padding:48px 0}
+#env-strategic-concepts footer .grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+#env-strategic-concepts footer strong{color:#fff;font-weight:600}
+#env-strategic-concepts footer .mono{font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.5);margin-top:10px}
+@media(max-width:720px){#env-strategic-concepts .wrap{padding:0 20px}#env-strategic-concepts nav.top .inner{padding:14px 20px}#env-strategic-concepts header.hero h1{font-size:32px}}
+</style>
+<nav class="top"><div class="inner"><span class="brand">Strategic Concepts (India) Pvt. Ltd.</span><div class="navlinks">
+<a class="navlink" href="#env-strategic-concepts-identity">Identity</a><a class="navlink" href="#env-strategic-concepts-colour">Colour</a><a class="navlink" href="#env-strategic-concepts-gallery">Collateral</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow cat">Business consulting / training collateral</p>
+<h1>Strategic Concepts (India) Pvt. Ltd.</h1>
+<p class="tagline">“There is always a solution!”</p>
+<p class="desc">Logo and event collateral for Strategic Concepts (India) Pvt. Ltd., a sales-consulting firm, including posters for its 'Science of Sales Negotiation' session and its 'Sales Ki Pathshala' training sub-brand.</p>
+</div></header>
+
+<section id="env-strategic-concepts-identity"><div class="wrap">
+<div class="head"><p class="eyebrow">Identity</p><h2 style="font-size:24px">Mark &amp; lockup</h2></div>
+<div class="lockup-frame"><img src="../images/envisionar-strategic-concepts-logo.jpg" alt="Strategic Concepts (India) Pvt. Ltd. identity board"></div>
+</div></section>
+
+<section id="env-strategic-concepts-colour" style="background:var(--tint)"><div class="wrap">
+<div class="head"><p class="eyebrow">Colour</p><h2 style="font-size:24px">Palette</h2></div>
+<div class="swatches"><button data-hex="#1979B6" style="background:#1979B6;color:#FFFFFF"><span class="n">Swatch 1</span>#1979B6</button><button data-hex="#3588BD" style="background:#3588BD;color:#FFFFFF"><span class="n">Swatch 2</span>#3588BD</button><button data-hex="#CFE3EE" style="background:#CFE3EE;color:#141414"><span class="n">Swatch 3</span>#CFE3EE</button><button data-hex="#589AC3" style="background:#589AC3;color:#FFFFFF"><span class="n">Swatch 4</span>#589AC3</button><button data-hex="#90BED8" style="background:#90BED8;color:#141414"><span class="n">Swatch 5</span>#90BED8</button></div>
+<p class="copied" data-copied>Click a swatch to copy its hex.</p>
+<p class="note">Colours sampled from the identity artwork above (top panel).</p>
+</div></section>
+
+<section id="env-strategic-concepts-gallery"><div class="wrap">
+<div class="head"><p class="eyebrow">Collateral</p><h2 style="font-size:24px">Deliverables</h2><p class="note">Click any image to view it full size.</p></div>
+<div class="gallery"><figure data-src="../images/envisionar-strategic-concepts-logo.jpg" data-cap="Strategic Concepts — logo"><img src="../images/envisionar-strategic-concepts-logo.jpg" alt="Strategic Concepts — logo" loading="lazy"></figure><figure data-src="../images/envisionar-strategic-concepts-science-of-sales-negotiation-poster-public.jpg" data-cap="'The Science of Sales Negotiation' — event poster"><img src="../images/envisionar-strategic-concepts-science-of-sales-negotiation-poster-public.jpg" alt="'The Science of Sales Negotiation' — event poster" loading="lazy"></figure><figure data-src="../images/envisionar-strategic-concepts-science-of-sales-negotiation-poster-inhouse.jpg" data-cap="'The Science of Sales Negotiation' — in-house session poster"><img src="../images/envisionar-strategic-concepts-science-of-sales-negotiation-poster-inhouse.jpg" alt="'The Science of Sales Negotiation' — in-house session poster" loading="lazy"></figure><figure data-src="../images/envisionar-strategic-concepts-sales-ki-pathshala-logo.jpg" data-cap="Sales Ki Pathshala — training sub-brand logo"><img src="../images/envisionar-strategic-concepts-sales-ki-pathshala-logo.jpg" alt="Sales Ki Pathshala — training sub-brand logo" loading="lazy"></figure></div>
+</div></section>
+
+<div class="lightbox"><button class="close" aria-label="Close">&times;</button><img alt=""></div>
+
+<footer><div class="wrap"><div class="grid">
+<div><strong>Strategic Concepts (India) Pvt. Ltd.</strong><div class="mono">Brand identity by Envisionar</div></div>
+<div style="text-align:right;font-size:13px;line-height:1.8;color:rgba(255,255,255,.6)">
+<div>Identity design by <strong>Prof. Bhuleshwar Mate (Arun)</strong></div><div>Digitalized and Brand Images by <strong>Ms. Kaushambi Mate</strong></div><div>Copyright <strong>Envisionar</strong></div>
+</div>
+</div></div></footer>
+</div>
+
+<script>
+(function(){
+var root = document.getElementById('env-strategic-concepts');
+var lb = root.querySelector('.lightbox');
+var lbImg = lb.querySelector('img');
+root.querySelectorAll('.gallery figure').forEach(function(fig){
+  fig.addEventListener('click', function(){
+    lbImg.src = fig.getAttribute('data-src');
+    lbImg.alt = fig.getAttribute('data-cap');
+    lb.classList.add('open');
+  });
+});
+lb.querySelector('.close').addEventListener('click', function(){ lb.classList.remove('open'); });
+lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+var out = root.querySelector('[data-copied]');
+root.querySelectorAll('.swatches button').forEach(function(b){
+  b.addEventListener('click', function(){
+    var hex = b.getAttribute('data-hex');
+    if (navigator.clipboard) { navigator.clipboard.writeText(hex).then(function(){ out.textContent = hex + ' copied to clipboard'; }, function(){ out.textContent = hex; }); }
+    else { out.textContent = hex; }
+  });
+});
+})();
+</script>

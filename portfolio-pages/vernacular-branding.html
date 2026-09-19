@@ -1,0 +1,113 @@
+<div id="env-vernacular-branding">
+<style>
+#env-vernacular-branding{
+--ink:#101010;--paper:#FFFFFF;--tint:#F5F5F3;--line:#E4E3DF;--line-strong:#CFCEC8;--muted:#77746C;
+--accent:#004CFF;--accent-ink:#FFFFFF;
+--font-display:"Fraunces","Georgia",serif;--font-sans:"Inter","Helvetica Neue",Arial,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;
+display:block;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:15px;line-height:1.6;text-align:left;
+}
+#env-vernacular-branding *{box-sizing:border-box}
+#env-vernacular-branding div,#env-vernacular-branding p,#env-vernacular-branding span,#env-vernacular-branding a,#env-vernacular-branding img,#env-vernacular-branding dl,#env-vernacular-branding dt,#env-vernacular-branding dd,#env-vernacular-branding h1,#env-vernacular-branding h2,#env-vernacular-branding h3,#env-vernacular-branding figure,#env-vernacular-branding figcaption,#env-vernacular-branding nav,#env-vernacular-branding header,#env-vernacular-branding footer,#env-vernacular-branding section,#env-vernacular-branding button{font-family:inherit;font-size:inherit;line-height:inherit;color:inherit;margin:0;padding:0;border:0;background:none}
+#env-vernacular-branding img{max-width:100%;height:auto;display:block}
+#env-vernacular-branding a{color:inherit;text-decoration:none}
+#env-vernacular-branding h1,#env-vernacular-branding h2,#env-vernacular-branding h3{font-family:var(--font-display);font-weight:500;letter-spacing:-0.01em;line-height:1.15}
+#env-vernacular-branding .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;font-family:var(--font-sans)}
+#env-vernacular-branding .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+#env-vernacular-branding section{padding:64px 0;border-top:1px solid var(--line)}
+#env-vernacular-branding section:first-of-type{border-top:none}
+#env-vernacular-branding .head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:62ch}
+#env-vernacular-branding nav.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#env-vernacular-branding nav.top .inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+#env-vernacular-branding nav.top .brand{font-family:var(--font-display);font-size:16px;font-weight:600}
+#env-vernacular-branding nav.top .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+#env-vernacular-branding nav.top a.navlink{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+#env-vernacular-branding nav.top a.navlink:hover{color:var(--accent-ink)}
+#env-vernacular-branding header.hero{background:var(--accent);color:var(--accent-ink);padding:72px 0}
+#env-vernacular-branding header.hero .cat{color:var(--accent-ink);opacity:.72}
+#env-vernacular-branding header.hero h1{font-size:44px;margin-top:10px}
+#env-vernacular-branding header.hero .tagline{font-family:var(--font-display);font-style:italic;font-size:20px;margin-top:16px;max-width:44ch;opacity:.92}
+#env-vernacular-branding header.hero .desc{margin-top:18px;max-width:56ch;opacity:.85;font-size:15px}
+#env-vernacular-branding .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;border:1px solid var(--line)}
+#env-vernacular-branding .swatches button{cursor:pointer;height:120px;padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-family:var(--font-mono);font-size:12px;width:100%;border-right:1px solid rgba(0,0,0,.06)}
+#env-vernacular-branding .swatches span.n{display:block;font-size:10px;opacity:.75}
+#env-vernacular-branding .copied{font-size:13px;color:var(--muted);min-height:20px;margin-top:14px}
+#env-vernacular-branding .note{font-size:13px;color:var(--muted);margin-top:14px;max-width:60ch}
+#env-vernacular-branding .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+#env-vernacular-branding .gallery figure{margin:0;cursor:zoom-in;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
+#env-vernacular-branding .gallery img{width:100%;height:auto;display:block;transition:transform .3s ease}
+#env-vernacular-branding .gallery figure:hover img{transform:scale(1.04)}
+#env-vernacular-branding .lightbox{position:fixed;inset:0;z-index:999999;display:none;background:rgba(16,16,16,.9);align-items:center;justify-content:center;padding:32px}
+#env-vernacular-branding .lightbox.open{display:flex}
+#env-vernacular-branding .lightbox img{max-width:min(1100px,92vw);max-height:88vh;width:auto;height:auto;margin:0 auto}
+#env-vernacular-branding .lightbox .close{position:absolute;top:24px;right:32px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+#env-vernacular-branding .lockup-frame{display:flex;align-items:center;justify-content:center;min-height:360px;padding:48px;background:var(--tint);border:1px solid var(--line)}
+#env-vernacular-branding .lockup-frame img{max-width:78%;max-height:300px;margin:0 auto}
+#env-vernacular-branding footer{background:var(--ink);color:rgba(255,255,255,.72);padding:48px 0}
+#env-vernacular-branding footer .grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+#env-vernacular-branding footer strong{color:#fff;font-weight:600}
+#env-vernacular-branding footer .mono{font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.5);margin-top:10px}
+@media(max-width:720px){#env-vernacular-branding .wrap{padding:0 20px}#env-vernacular-branding nav.top .inner{padding:14px 20px}#env-vernacular-branding header.hero h1{font-size:32px}}
+</style>
+<nav class="top"><div class="inner"><span class="brand">Vernacular Branding</span><div class="navlinks">
+<a class="navlink" href="#env-vernacular-branding-identity">Identity</a><a class="navlink" href="#env-vernacular-branding-colour">Colour</a><a class="navlink" href="#env-vernacular-branding-gallery">Collateral</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow cat">Book design &amp; publishing</p>
+<h1>Vernacular Branding</h1>
+<p class="tagline">“Reading Identity Through Design and Visibility”</p>
+<p class="desc">Cover, business-card and mailing-collateral design for “Vernacular Branding,” co-authored by Bhuleshwar (Arun) Mate and Kaushambi Mate, in an electric-blue and lime palette.</p>
+</div></header>
+
+<section id="env-vernacular-branding-identity"><div class="wrap">
+<div class="head"><p class="eyebrow">Identity</p><h2 style="font-size:24px">Mark &amp; lockup</h2></div>
+<div class="lockup-frame"><img src="../images/envisionar-vernacular-branding-book-cover.jpg" alt="Vernacular Branding identity board"></div>
+</div></section>
+
+<section id="env-vernacular-branding-colour" style="background:var(--tint)"><div class="wrap">
+<div class="head"><p class="eyebrow">Colour</p><h2 style="font-size:24px">Palette</h2></div>
+<div class="swatches"><button data-hex="#004CFF" style="background:#004CFF;color:#FFFFFF"><span class="n">Swatch 1</span>#004CFF</button><button data-hex="#95B5FF" style="background:#95B5FF;color:#141414"><span class="n">Swatch 2</span>#95B5FF</button><button data-hex="#BCD0FF" style="background:#BCD0FF;color:#141414"><span class="n">Swatch 3</span>#BCD0FF</button><button data-hex="#3570FF" style="background:#3570FF;color:#FFFFFF"><span class="n">Swatch 4</span>#3570FF</button><button data-hex="#5F8EFF" style="background:#5F8EFF;color:#141414"><span class="n">Swatch 5</span>#5F8EFF</button></div>
+<p class="copied" data-copied>Click a swatch to copy its hex.</p>
+<p class="note">Colours sampled from the identity artwork above (top panel).</p>
+</div></section>
+
+<section id="env-vernacular-branding-gallery"><div class="wrap">
+<div class="head"><p class="eyebrow">Collateral</p><h2 style="font-size:24px">Deliverables</h2><p class="note">Click any image to view it full size.</p></div>
+<div class="gallery"><figure data-src="../images/envisionar-vernacular-branding-book-cover.jpg" data-cap="Vernacular Branding — deliverable 1"><img src="../images/envisionar-vernacular-branding-book-cover.jpg" alt="Vernacular Branding — deliverable 1" loading="lazy"></figure><figure data-src="../images/envisionar-vernacular-branding-book-cover-alt-1.jpg" data-cap="Vernacular Branding — deliverable 2"><img src="../images/envisionar-vernacular-branding-book-cover-alt-1.jpg" alt="Vernacular Branding — deliverable 2" loading="lazy"></figure><figure data-src="../images/envisionar-vernacular-branding-book-cover-alt-2.jpg" data-cap="Vernacular Branding — deliverable 3"><img src="../images/envisionar-vernacular-branding-book-cover-alt-2.jpg" alt="Vernacular Branding — deliverable 3" loading="lazy"></figure><figure data-src="../images/envisionar-vernacular-branding-business-card-mockup.png" data-cap="Vernacular Branding — deliverable 4"><img src="../images/envisionar-vernacular-branding-business-card-mockup.png" alt="Vernacular Branding — deliverable 4" loading="lazy"></figure><figure data-src="../images/envisionar-vernacular-branding-parcel-label.jpg" data-cap="Vernacular Branding — deliverable 5"><img src="../images/envisionar-vernacular-branding-parcel-label.jpg" alt="Vernacular Branding — deliverable 5" loading="lazy"></figure><figure data-src="../images/envisionar-vernacular-branding-linkedin-featured-image.jpg" data-cap="Vernacular Branding — deliverable 6"><img src="../images/envisionar-vernacular-branding-linkedin-featured-image.jpg" alt="Vernacular Branding — deliverable 6" loading="lazy"></figure></div>
+</div></section>
+
+<div class="lightbox"><button class="close" aria-label="Close">&times;</button><img alt=""></div>
+
+<footer><div class="wrap"><div class="grid">
+<div><strong>Vernacular Branding</strong><div class="mono">Brand identity by Bhuleshwar Mate &amp; Kaushambi Mate</div></div>
+<div style="text-align:right;font-size:13px;line-height:1.8;color:rgba(255,255,255,.6)">
+<div>Co-authors <strong>Prof. Bhuleshwar Mate (Arun)</strong> and <strong>Ms. Kaushambi Mate</strong></div><div>Identity design and Book Design by <strong>Ms. Kaushambi Mate</strong></div><div>Copyright <strong>Bhuleshwar Mate and Kaushambi Mate</strong></div>
+</div>
+</div></div></footer>
+</div>
+
+<script>
+(function(){
+var root = document.getElementById('env-vernacular-branding');
+var lb = root.querySelector('.lightbox');
+var lbImg = lb.querySelector('img');
+root.querySelectorAll('.gallery figure').forEach(function(fig){
+  fig.addEventListener('click', function(){
+    lbImg.src = fig.getAttribute('data-src');
+    lbImg.alt = fig.getAttribute('data-cap');
+    lb.classList.add('open');
+  });
+});
+lb.querySelector('.close').addEventListener('click', function(){ lb.classList.remove('open'); });
+lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+var out = root.querySelector('[data-copied]');
+root.querySelectorAll('.swatches button').forEach(function(b){
+  b.addEventListener('click', function(){
+    var hex = b.getAttribute('data-hex');
+    if (navigator.clipboard) { navigator.clipboard.writeText(hex).then(function(){ out.textContent = hex + ' copied to clipboard'; }, function(){ out.textContent = hex; }); }
+    else { out.textContent = hex; }
+  });
+});
+})();
+</script>

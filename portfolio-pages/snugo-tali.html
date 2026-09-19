@@ -1,0 +1,113 @@
+<div id="env-snugo-tali">
+<style>
+#env-snugo-tali{
+--ink:#101010;--paper:#FFFFFF;--tint:#F5F5F3;--line:#E4E3DF;--line-strong:#CFCEC8;--muted:#77746C;
+--accent:#6B7D87;--accent-ink:#FFFFFF;
+--font-display:"Fraunces","Georgia",serif;--font-sans:"Inter","Helvetica Neue",Arial,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;
+display:block;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:15px;line-height:1.6;text-align:left;
+}
+#env-snugo-tali *{box-sizing:border-box}
+#env-snugo-tali div,#env-snugo-tali p,#env-snugo-tali span,#env-snugo-tali a,#env-snugo-tali img,#env-snugo-tali dl,#env-snugo-tali dt,#env-snugo-tali dd,#env-snugo-tali h1,#env-snugo-tali h2,#env-snugo-tali h3,#env-snugo-tali figure,#env-snugo-tali figcaption,#env-snugo-tali nav,#env-snugo-tali header,#env-snugo-tali footer,#env-snugo-tali section,#env-snugo-tali button{font-family:inherit;font-size:inherit;line-height:inherit;color:inherit;margin:0;padding:0;border:0;background:none}
+#env-snugo-tali img{max-width:100%;height:auto;display:block}
+#env-snugo-tali a{color:inherit;text-decoration:none}
+#env-snugo-tali h1,#env-snugo-tali h2,#env-snugo-tali h3{font-family:var(--font-display);font-weight:500;letter-spacing:-0.01em;line-height:1.15}
+#env-snugo-tali .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;font-family:var(--font-sans)}
+#env-snugo-tali .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+#env-snugo-tali section{padding:64px 0;border-top:1px solid var(--line)}
+#env-snugo-tali section:first-of-type{border-top:none}
+#env-snugo-tali .head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:62ch}
+#env-snugo-tali nav.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#env-snugo-tali nav.top .inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+#env-snugo-tali nav.top .brand{font-family:var(--font-display);font-size:16px;font-weight:600}
+#env-snugo-tali nav.top .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+#env-snugo-tali nav.top a.navlink{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+#env-snugo-tali nav.top a.navlink:hover{color:var(--accent-ink)}
+#env-snugo-tali header.hero{background:var(--accent);color:var(--accent-ink);padding:72px 0}
+#env-snugo-tali header.hero .cat{color:var(--accent-ink);opacity:.72}
+#env-snugo-tali header.hero h1{font-size:44px;margin-top:10px}
+#env-snugo-tali header.hero .tagline{font-family:var(--font-display);font-style:italic;font-size:20px;margin-top:16px;max-width:44ch;opacity:.92}
+#env-snugo-tali header.hero .desc{margin-top:18px;max-width:56ch;opacity:.85;font-size:15px}
+#env-snugo-tali .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;border:1px solid var(--line)}
+#env-snugo-tali .swatches button{cursor:pointer;height:120px;padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-family:var(--font-mono);font-size:12px;width:100%;border-right:1px solid rgba(0,0,0,.06)}
+#env-snugo-tali .swatches span.n{display:block;font-size:10px;opacity:.75}
+#env-snugo-tali .copied{font-size:13px;color:var(--muted);min-height:20px;margin-top:14px}
+#env-snugo-tali .note{font-size:13px;color:var(--muted);margin-top:14px;max-width:60ch}
+#env-snugo-tali .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+#env-snugo-tali .gallery figure{margin:0;cursor:zoom-in;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
+#env-snugo-tali .gallery img{width:100%;height:auto;display:block;transition:transform .3s ease}
+#env-snugo-tali .gallery figure:hover img{transform:scale(1.04)}
+#env-snugo-tali .lightbox{position:fixed;inset:0;z-index:999999;display:none;background:rgba(16,16,16,.9);align-items:center;justify-content:center;padding:32px}
+#env-snugo-tali .lightbox.open{display:flex}
+#env-snugo-tali .lightbox img{max-width:min(1100px,92vw);max-height:88vh;width:auto;height:auto;margin:0 auto}
+#env-snugo-tali .lightbox .close{position:absolute;top:24px;right:32px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+#env-snugo-tali .lockup-frame{display:flex;align-items:center;justify-content:center;min-height:360px;padding:48px;background:var(--tint);border:1px solid var(--line)}
+#env-snugo-tali .lockup-frame img{max-width:78%;max-height:300px;margin:0 auto}
+#env-snugo-tali footer{background:var(--ink);color:rgba(255,255,255,.72);padding:48px 0}
+#env-snugo-tali footer .grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+#env-snugo-tali footer strong{color:#fff;font-weight:600}
+#env-snugo-tali footer .mono{font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.5);margin-top:10px}
+@media(max-width:720px){#env-snugo-tali .wrap{padding:0 20px}#env-snugo-tali nav.top .inner{padding:14px 20px}#env-snugo-tali header.hero h1{font-size:32px}}
+</style>
+<nav class="top"><div class="inner"><span class="brand">Snugo Tali</span><div class="navlinks">
+<a class="navlink" href="#env-snugo-tali-identity">Identity</a><a class="navlink" href="#env-snugo-tali-colour">Colour</a><a class="navlink" href="#env-snugo-tali-gallery">Collateral</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow cat">Brand identity</p>
+<h1>Snugo Tali</h1>
+
+<p class="desc">A rounded “st” monogram and wordmark in slate grey, shown on exterior signage.</p>
+</div></header>
+
+<section id="env-snugo-tali-identity"><div class="wrap">
+<div class="head"><p class="eyebrow">Identity</p><h2 style="font-size:24px">Mark &amp; lockup</h2></div>
+<div class="lockup-frame"><img src="../images/envisionar-snugo-tali-monogram-signage-board.jpg" alt="Snugo Tali identity board"></div>
+</div></section>
+
+<section id="env-snugo-tali-colour" style="background:var(--tint)"><div class="wrap">
+<div class="head"><p class="eyebrow">Colour</p><h2 style="font-size:24px">Palette</h2></div>
+<div class="swatches"><button data-hex="#6B7D87" style="background:#6B7D87;color:#FFFFFF"><span class="n">Swatch 1</span>#6B7D87</button><button data-hex="#E4E8E9" style="background:#E4E8E9;color:#141414"><span class="n">Swatch 2</span>#E4E8E9</button><button data-hex="#8B99A0" style="background:#8B99A0;color:#141414"><span class="n">Swatch 3</span>#8B99A0</button><button data-hex="#AAB4B9" style="background:#AAB4B9;color:#141414"><span class="n">Swatch 4</span>#AAB4B9</button><button data-hex="#C5CCD0" style="background:#C5CCD0;color:#141414"><span class="n">Swatch 5</span>#C5CCD0</button></div>
+<p class="copied" data-copied>Click a swatch to copy its hex.</p>
+<p class="note">Colours sampled from the identity artwork above (top panel).</p>
+</div></section>
+
+<section id="env-snugo-tali-gallery"><div class="wrap">
+<div class="head"><p class="eyebrow">Collateral</p><h2 style="font-size:24px">Deliverables</h2><p class="note">Click any image to view it full size.</p></div>
+<div class="gallery"><figure data-src="../images/envisionar-snugo-tali-monogram-signage-board.jpg" data-cap="Snugo Tali — deliverable 1"><img src="../images/envisionar-snugo-tali-monogram-signage-board.jpg" alt="Snugo Tali — deliverable 1" loading="lazy"></figure><figure data-src="../images/envisionar-snugo-tali-signage-detail.jpg" data-cap="Snugo Tali — deliverable 2"><img src="../images/envisionar-snugo-tali-signage-detail.jpg" alt="Snugo Tali — deliverable 2" loading="lazy"></figure></div>
+</div></section>
+
+<div class="lightbox"><button class="close" aria-label="Close">&times;</button><img alt=""></div>
+
+<footer><div class="wrap"><div class="grid">
+<div><strong>Snugo Tali</strong><div class="mono">Brand identity by Envisionar</div></div>
+<div style="text-align:right;font-size:13px;line-height:1.8;color:rgba(255,255,255,.6)">
+<div>Identity design by <strong>Prof. Bhuleshwar Mate (Arun)</strong></div><div>Digitalized and Brand Images by <strong>Ms. Kaushambi Mate</strong></div><div>Copyright <strong>Envisionar</strong></div>
+</div>
+</div></div></footer>
+</div>
+
+<script>
+(function(){
+var root = document.getElementById('env-snugo-tali');
+var lb = root.querySelector('.lightbox');
+var lbImg = lb.querySelector('img');
+root.querySelectorAll('.gallery figure').forEach(function(fig){
+  fig.addEventListener('click', function(){
+    lbImg.src = fig.getAttribute('data-src');
+    lbImg.alt = fig.getAttribute('data-cap');
+    lb.classList.add('open');
+  });
+});
+lb.querySelector('.close').addEventListener('click', function(){ lb.classList.remove('open'); });
+lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open'); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+var out = root.querySelector('[data-copied]');
+root.querySelectorAll('.swatches button').forEach(function(b){
+  b.addEventListener('click', function(){
+    var hex = b.getAttribute('data-hex');
+    if (navigator.clipboard) { navigator.clipboard.writeText(hex).then(function(){ out.textContent = hex + ' copied to clipboard'; }, function(){ out.textContent = hex; }); }
+    else { out.textContent = hex; }
+  });
+});
+})();
+</script>
