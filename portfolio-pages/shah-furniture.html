@@ -61,6 +61,7 @@ display:block;background:var(--paper);color:var(--ink);font-family:var(--font-sa
 #env-shah-furniture header.hero h1{font-size:44px;margin-top:10px}
 #env-shah-furniture header.hero .tagline{font-family:var(--font-display);font-style:italic;font-size:20px;margin-top:16px;max-width:44ch;opacity:.92}
 #env-shah-furniture header.hero .desc{margin-top:18px;max-width:56ch;opacity:.85;font-size:15px}
+#env-shah-furniture .gradient-bar{height:96px;border:1px solid var(--line);margin-bottom:14px}
 #env-shah-furniture .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;border:1px solid var(--line)}
 #env-shah-furniture .swatches button{cursor:pointer;height:120px;padding:14px;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-family:var(--font-mono);font-size:12px;width:100%;border-right:1px solid rgba(0,0,0,.06)}
 #env-shah-furniture .swatches span.n{display:block;font-size:10px;opacity:.75}
@@ -100,9 +101,10 @@ display:block;background:var(--paper);color:var(--ink);font-family:var(--font-sa
 
 <section id="env-shah-furniture-colour" style="background:var(--tint)"><div class="wrap">
 <div class="head"><p class="eyebrow">Colour</p><h2 style="font-size:24px">Palette</h2></div>
-<div class="swatches"><button data-hex="#FAF2CC" style="background:#FAF2CC;color:#141414"><span class="n">Swatch 1</span>#FAF2CC</button><button data-hex="#F3E4A5" style="background:#F3E4A5;color:#141414"><span class="n">Swatch 2</span>#F3E4A5</button><button data-hex="#EBD26C" style="background:#EBD26C;color:#141414"><span class="n">Swatch 3</span>#EBD26C</button><button data-hex="#E4C240" style="background:#E4C240;color:#141414"><span class="n">Swatch 4</span>#E4C240</button></div>
+<div class="gradient-bar" style="background:linear-gradient(135deg,#FAF2CC 0%,#F3E4A5 28%,#EBD26C 52%,#E4C240 74%,#A6862C 100%)" aria-hidden="true"></div>
+<div class="swatches"><button data-hex="#FAF2CC" style="background:#FAF2CC;color:#141414"><span class="n">Swatch 1</span>#FAF2CC</button><button data-hex="#F3E4A5" style="background:#F3E4A5;color:#141414"><span class="n">Swatch 2</span>#F3E4A5</button><button data-hex="#EBD26C" style="background:#EBD26C;color:#141414"><span class="n">Swatch 3</span>#EBD26C</button><button data-hex="#E4C240" style="background:#E4C240;color:#141414"><span class="n">Swatch 4</span>#E4C240</button><button data-hex="#A6862C" style="background:#A6862C;color:#FFFFFF"><span class="n">Swatch 5</span>#A6862C</button></div>
 <p class="copied" data-copied>Click a swatch to copy its hex.</p>
-<p class="note">Colours sampled from the identity artwork above (top panel).</p>
+<p class="note">The mark uses a metallic gold gradient rather than a flat colour; stops sampled from the identity artwork above (top panel), lightest to deepest.</p>
 </div></section>
 
 <section id="env-shah-furniture-gallery"><div class="wrap">
@@ -154,7 +156,7 @@ root.querySelectorAll('.swatches button').forEach(function(b){
 .proj-nav a.back:hover{background:#0E0E0E;border-color:#0E0E0E}
 </style>
 <nav class="proj-nav" aria-label="Project navigation">
-  <a href="sandi">← Previous: Sandi</a>
+  <a href="rivaaz-boutique">← Previous: Rivaaz Boutique</a>
   <a class="back" href="../portfolio">Back to Portfolio</a>
   <a href="shridhar-steels">Next: Shridhar Steels →</a>
 </nav>
