@@ -104,58 +104,76 @@ body{margin:0;font-family:"Satoshi Variable",Helvetica,Arial,sans-serif;backgrou
 @keyframes eh-run{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){#env-home .proof-track{animation:none}}
 
-/* ---- SELECTED WORK: vertical stacking cards ---- */
+/* ---- SELECTED WORK: vertical stacking cards, 3-column ---- */
 #env-home .work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
 #env-home .work-head h2{font-size:clamp(30px,4.6vw,58px);line-height:1.04;max-width:16ch}
 #env-home .stack{position:relative}
-#env-home .wk{position:sticky;display:block;overflow:hidden;border-radius:18px;background:#eee;height:min(560px,72vh);margin-bottom:26px;box-shadow:0 30px 70px rgba(14,14,14,.22)}
-#env-home .wk img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1);filter:saturate(1.02)}
-#env-home .wk:hover img{transform:scale(1.045)}
-#env-home .wk::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.18) 40%,transparent 64%)}
-#env-home .wk .meta{position:absolute;left:clamp(20px,3vw,36px);right:clamp(20px,3vw,36px);bottom:clamp(20px,3vw,32px);color:#fff}
-#env-home .wk .meta b{display:block;font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:clamp(24px,3.6vw,40px)}
-#env-home .wk .meta span{display:block;font:600 11px/1 'Satoshi Variable',sans-serif;letter-spacing:.14em;text-transform:uppercase;opacity:.8;margin-top:7px}
+#env-home .wk{position:sticky;display:grid;grid-template-columns:1fr 1.3fr 0.85fr;overflow:hidden;border-radius:18px;background:var(--ink);height:min(480px,68vh);margin-bottom:26px;box-shadow:0 30px 70px rgba(14,14,14,.22)}
+#env-home .wk-info,#env-home .wk-stats{display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,2.6vw,40px);color:#fff}
+#env-home .wk-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+#env-home .pill{display:inline-flex;padding:5px 13px;border:1px solid rgba(255,255,255,.28);border-radius:100px;font:700 10px/1 'Satoshi Variable',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.88)}
+#env-home .wk-name{display:block;font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:clamp(26px,2.6vw,38px);margin-bottom:12px}
+#env-home .wk-desc{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.68)}
+#env-home .wk-image{position:relative;overflow:hidden;height:100%}
+#env-home .wk-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+#env-home .wk:hover .wk-image img{transform:scale(1.045)}
+#env-home .wk-stats{background:rgba(255,255,255,.04);gap:18px}
+#env-home .wk-stat .k{display:block;font:700 10px/1 'Satoshi Variable',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:6px}
+#env-home .wk-stat .v{display:block;font-size:14px;color:#fff}
 #env-home .stack a.wk:nth-child(1){top:84px;z-index:1}
 #env-home .stack a.wk:nth-child(2){top:100px;z-index:2}
 #env-home .stack a.wk:nth-child(3){top:116px;z-index:3}
 #env-home .stack a.wk:nth-child(4){top:132px;z-index:4}
 #env-home .stack a.wk:nth-child(5){top:148px;z-index:5}
 #env-home .stack a.wk:nth-child(6){top:164px;z-index:6;margin-bottom:0}
-@media(max-width:640px){
-  #env-home .wk{height:64vh}
-  #env-home .stack a.wk:nth-child(1){top:68px}
-  #env-home .stack a.wk:nth-child(2){top:80px}
-  #env-home .stack a.wk:nth-child(3){top:92px}
-  #env-home .stack a.wk:nth-child(4){top:104px}
-  #env-home .stack a.wk:nth-child(5){top:116px}
-  #env-home .stack a.wk:nth-child(6){top:128px}
+@media(max-width:860px){
+  /* variable card height on narrow screens breaks the fixed-offset cascade math,
+     so fall back to a plain stacked list instead of overlapping sticky cards */
+  #env-home .wk{position:relative;top:0!important;z-index:auto!important;grid-template-columns:1fr;height:auto;grid-template-rows:auto auto auto;margin-bottom:22px}
+  #env-home .wk-image{height:220px;order:1}
+  #env-home .wk-info{order:2}
+  #env-home .wk-stats{order:3;flex-direction:row;flex-wrap:wrap;gap:20px}
 }
 @media(prefers-reduced-motion:reduce){#env-home .wk{position:relative;top:0!important;margin-bottom:18px}}
 
-/* ---- SERVICES: horizontal scroll-stacking ---- */
-#env-home .svc-h-wrap{position:relative}
-#env-home .svc-h-pin{position:sticky;top:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,4vw,40px) 0}
-#env-home .svc-h-track{display:flex;gap:clamp(16px,2.4vw,28px);overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
-#env-home .svc-h-track::-webkit-scrollbar{display:none}
-#env-home .svc{--acc:var(--blue);scroll-snap-align:start;position:relative;flex:0 0 min(78vw,460px);display:flex;flex-direction:column;justify-content:space-between;padding:clamp(26px,3vw,36px);border-radius:18px;background:var(--panel);border:1px solid var(--line);overflow:hidden;min-height:clamp(280px,34vw,340px)}
-#env-home .svc::before{content:"";position:absolute;inset:0;background:var(--acc);transform:translateY(101%);transition:transform .45s cubic-bezier(.16,1,.3,1);z-index:0}
-#env-home .svc:hover::before,#env-home .svc:focus-within::before{transform:none}
-#env-home .svc>*{position:relative;z-index:1}
-#env-home .svc .n{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:22px;color:var(--muted);transition:color .3s}
-#env-home .svc-t{font-size:clamp(26px,2.4vw,32px);margin-top:14px;transition:color .3s}
-#env-home .svc-b{font-size:13.5px;color:var(--muted);margin-top:10px;transition:color .3s}
-#env-home .svc .go{display:inline-flex;align-items:center;gap:8px;font:700 11.5px/1 'Satoshi Variable',sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;color:var(--acc);margin-top:20px;transition:color .3s}
+/* ---- SERVICES: Atoll-style giant type + vertical stacking cards ---- */
+#env-home .svc-stack-sec{background:var(--ink);color:#fff;padding:var(--sec) 0}
+#env-home .svc-stack-sec .kick{color:rgba(255,255,255,.55)}
+#env-home .svc-stack-sec .kick i{background:var(--magenta)}
+#env-home .svc-giant{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(64px,12vw,180px);line-height:.88;margin:6px 0 clamp(32px,5vw,64px);background:var(--g1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#env-home .svc-stack{position:relative}
+#env-home .svc{--acc:var(--blue);position:sticky;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(20px,3.4vw,48px);padding:clamp(28px,4vw,52px);border-radius:18px;background:var(--acc);color:#fff;height:min(360px,52vh);margin-bottom:22px;box-shadow:0 30px 70px rgba(0,0,0,.4);overflow:hidden}
+#env-home .svc .n{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:clamp(40px,5.4vw,72px);opacity:.4}
+#env-home .svc-t{font-size:clamp(28px,3.6vw,48px);margin-bottom:10px}
+#env-home .svc-b{font-size:14px;line-height:1.7;opacity:.82;max-width:44ch}
+#env-home .svc .go{display:inline-flex;align-items:center;gap:8px;font:700 11.5px/1 'Satoshi Variable',sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;justify-self:end}
 #env-home .svc .go i{font-style:normal;display:inline-block;transition:transform .35s}
 #env-home .svc:hover .go i{transform:translateX(6px)}
-#env-home .svc:hover .n,#env-home .svc:hover .svc-b,#env-home .svc:hover .go{color:#fff}
-#env-home .svc:hover .svc-t{color:#fff}
 #env-home .svc[data-acc="magenta"]{--acc:var(--magenta)}
 #env-home .svc[data-acc="gold"]{--acc:var(--gold)}
-#env-home .svc[data-acc="ink"]{--acc:var(--ink)}
 #env-home .svc[data-acc="bronze"]{--acc:var(--bronze)}
-#env-home .svc-h-bar{height:3px;border-radius:2px;background:var(--line);margin-top:clamp(20px,3vw,32px);overflow:hidden}
-#env-home .svc-h-fill{display:block;height:100%;width:0;background:var(--g1)}
-@media(min-width:900px){#env-home .svc{flex:0 0 440px}}
+#env-home .svc[data-acc="gradient"]{background:var(--g1)}
+#env-home .svc[data-acc="paper"]{background:var(--paper);color:var(--ink)}
+#env-home .svc[data-acc="paper"] .n{color:var(--ink)}
+#env-home .svc[data-acc="paper"] .svc-b{color:var(--muted);opacity:1}
+#env-home .svc[data-acc="paper"] .go{color:var(--blue)}
+#env-home .svc-stack .svc:nth-child(1){top:84px;z-index:1}
+#env-home .svc-stack .svc:nth-child(2){top:100px;z-index:2}
+#env-home .svc-stack .svc:nth-child(3){top:116px;z-index:3}
+#env-home .svc-stack .svc:nth-child(4){top:132px;z-index:4}
+#env-home .svc-stack .svc:nth-child(5){top:148px;z-index:5}
+#env-home .svc-stack .svc:nth-child(6){top:164px;z-index:6;margin-bottom:0}
+@media(max-width:700px){
+  #env-home .svc{grid-template-columns:1fr;height:auto;min-height:240px;gap:14px}
+  #env-home .svc .go{justify-self:start}
+  #env-home .svc-stack .svc:nth-child(1){top:68px}
+  #env-home .svc-stack .svc:nth-child(2){top:80px}
+  #env-home .svc-stack .svc:nth-child(3){top:92px}
+  #env-home .svc-stack .svc:nth-child(4){top:104px}
+  #env-home .svc-stack .svc:nth-child(5){top:116px}
+  #env-home .svc-stack .svc:nth-child(6){top:128px}
+}
+@media(prefers-reduced-motion:reduce){#env-home .svc{position:relative;top:0!important;margin-bottom:18px}}
 
 /* ---- STUDIO ---- */
 #env-home .studio-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start}
@@ -261,31 +279,54 @@ body{margin:0;font-family:"Satoshi Variable",Helvetica,Arial,sans-serif;backgrou
     <a href="portfolio" class="btn btn-ink">See the full portfolio ↗</a>
   </div>
   <div class="stack">
-    <a class="wk rv" href="portfolio-pages/iffi-1993"><img src="images/envisionar-iffi-1993-identity-mark-board.jpg" alt="IFFI 1993" loading="lazy"><div class="meta"><b>IFFI 1993</b><span>Government of India · Identity</span></div></a>
-    <a class="wk rv" href="portfolio-pages/vernacular-branding"><img src="images/envisionar-vernacular-branding-book-cover.jpg" alt="Vernacular Branding" loading="lazy"><div class="meta"><b>Vernacular Branding</b><span>Publication</span></div></a>
-    <a class="wk rv" href="portfolio-pages/dr-priyas-pmc"><img src="images/envisionar-dr-priyas-pmc-clinic-brand-identity-board.jpg" alt="Dr. Priya's PMC" loading="lazy" style="object-position:50% 5%"><div class="meta"><b>Dr. Priya's PMC</b><span>Healthcare · Identity</span></div></a>
-    <a class="wk rv" href="portfolio-pages/nap-neeru-art-printers"><img src="images/envisionar-nap-neeru-art-printers-stationery-mockup.jpg" alt="NAP" loading="lazy" style="object-position:50% 82%"><div class="meta"><b>NAP</b><span>Print &amp; Stationery</span></div></a>
-    <a class="wk rv" href="portfolio-pages/century-travels"><img src="images/envisionar-century-travels-signage-mockup.jpg" alt="Century Travels" loading="lazy" style="object-position:50% 88%"><div class="meta"><b>Century Travels</b><span>Signage</span></div></a>
-    <a class="wk rv" href="portfolio-pages/datamines"><img src="images/envisionar-datamines-applied-mockups-app-web-signage.jpg" alt="Datamines" loading="lazy" style="object-position:0% 32%"><div class="meta"><b>Datamines</b><span>Tech · Full Identity</span></div></a>
+    <a class="wk rv" href="portfolio-pages/iffi-1993">
+      <div class="wk-info"><div class="wk-pills"><span class="pill">Government</span><span class="pill">Identity</span></div><span class="wk-name">IFFI 1993</span><p class="wk-desc">A film-festival identity and collateral system for the 24th International Film Festival of India, New Delhi.</p></div>
+      <div class="wk-image"><img src="images/envisionar-iffi-1993-catalogue-cover-mockup.jpg" alt="IFFI 1993 catalogue" loading="lazy"></div>
+      <div class="wk-stats"><div class="wk-stat"><span class="k">Client</span><span class="v">Govt. of India · Directorate of Film Festivals</span></div><div class="wk-stat"><span class="k">Service</span><span class="v">Identity &amp; Collateral</span></div><div class="wk-stat"><span class="k">Category</span><span class="v">Government</span></div></div>
+    </a>
+    <a class="wk rv" href="portfolio-pages/vernacular-branding">
+      <div class="wk-info"><div class="wk-pills"><span class="pill">Publication</span><span class="pill">Editorial</span></div><span class="wk-name">Vernacular Branding</span><p class="wk-desc">A self-published exploration of identity, cultural memory and postcolonial representation in Indian branding.</p></div>
+      <div class="wk-image"><img src="images/envisionar-vernacular-branding-book-cover.jpg" alt="Vernacular Branding" loading="lazy"></div>
+      <div class="wk-stats"><div class="wk-stat"><span class="k">Client</span><span class="v">Self-published</span></div><div class="wk-stat"><span class="k">Service</span><span class="v">Book &amp; Editorial Design</span></div><div class="wk-stat"><span class="k">Category</span><span class="v">Publication</span></div></div>
+    </a>
+    <a class="wk rv" href="portfolio-pages/dr-priyas-pmc">
+      <div class="wk-info"><div class="wk-pills"><span class="pill">Healthcare</span><span class="pill">Identity</span></div><span class="wk-name">Dr. Priya's PMC</span><p class="wk-desc">A warm, approachable clinic identity extended across app, stationery and signage.</p></div>
+      <div class="wk-image"><img src="images/envisionar-dr-priyas-pmc-app-screen-mockup.jpg" alt="Dr. Priya's PMC app" loading="lazy"></div>
+      <div class="wk-stats"><div class="wk-stat"><span class="k">Client</span><span class="v">Dr. Priya's Pain Management Centre</span></div><div class="wk-stat"><span class="k">Service</span><span class="v">Brand Identity, App UI</span></div><div class="wk-stat"><span class="k">Category</span><span class="v">Healthcare</span></div></div>
+    </a>
+    <a class="wk rv" href="portfolio-pages/nap-neeru-art-printers">
+      <div class="wk-info"><div class="wk-pills"><span class="pill">Print</span><span class="pill">Stationery</span></div><span class="wk-name">NAP</span><p class="wk-desc">A full print and stationery system for Neeru Art Printers, grounded in craft and print-first thinking.</p></div>
+      <div class="wk-image"><img src="images/envisionar-nap-neeru-art-printers-stationery-mockup.jpg" alt="NAP stationery" loading="lazy" style="object-position:50% 82%"></div>
+      <div class="wk-stats"><div class="wk-stat"><span class="k">Client</span><span class="v">Neeru Art Printers</span></div><div class="wk-stat"><span class="k">Service</span><span class="v">Print &amp; Stationery</span></div><div class="wk-stat"><span class="k">Category</span><span class="v">Retail</span></div></div>
+    </a>
+    <a class="wk rv" href="portfolio-pages/century-travels">
+      <div class="wk-info"><div class="wk-pills"><span class="pill">Signage</span><span class="pill">Travel</span></div><span class="wk-name">Century Travels</span><p class="wk-desc">Wayfinding and signage that carries a travel brand from storefront to street.</p></div>
+      <div class="wk-image"><img src="images/envisionar-century-travels-signage-mockup.jpg" alt="Century Travels" loading="lazy" style="object-position:50% 88%"></div>
+      <div class="wk-stats"><div class="wk-stat"><span class="k">Client</span><span class="v">Century Travels</span></div><div class="wk-stat"><span class="k">Service</span><span class="v">Signage Design</span></div><div class="wk-stat"><span class="k">Category</span><span class="v">Travel &amp; Tourism</span></div></div>
+    </a>
+    <a class="wk rv" href="portfolio-pages/datamines">
+      <div class="wk-info"><div class="wk-pills"><span class="pill">Technology</span><span class="pill">Full Identity</span></div><span class="wk-name">Datamines</span><p class="wk-desc">A complete identity system extended across app, web and signage for a technology brand.</p></div>
+      <div class="wk-image"><img src="images/envisionar-datamines-applied-mockups-app-web-signage.jpg" alt="Datamines" loading="lazy" style="object-position:0% 32%"></div>
+      <div class="wk-stats"><div class="wk-stat"><span class="k">Client</span><span class="v">Datamines</span></div><div class="wk-stat"><span class="k">Service</span><span class="v">Full Brand Identity</span></div><div class="wk-stat"><span class="k">Category</span><span class="v">Technology</span></div></div>
+    </a>
   </div>
 </section>
 
-<!-- ── SERVICES: horizontal scroll-stacking ─────────── -->
-<section class="svc-h-wrap" id="svcHWrap">
-  <div class="svc-h-pin" id="svcHPin">
-    <div class="rv" style="margin-bottom:clamp(20px,3vw,32px)">
+<!-- ── SERVICES: Atoll-style giant type + stacking cards ── -->
+<section class="svc-stack-sec">
+  <div class="wrap">
+    <div class="rv">
       <p class="kick"><i></i>What We Do</p>
-      <h2 class="display" style="font-size:clamp(28px,4vw,48px);max-width:18ch">Every visual touchpoint your brand needs.</h2>
+      <h2 class="svc-giant">Services</h2>
     </div>
-    <div class="svc-h-track" id="svcHTrack">
-      <a class="svc" href="services#brand" data-acc="blue"><div><span class="n">01</span><span class="svc-t display" style="display:block">Brand Identity</span><p class="svc-b">Logo systems, brand guidelines, social identity and web design specs.</p></div><span class="go">Explore <i>→</i></span></a>
-      <a class="svc" href="services#print" data-acc="magenta"><div><span class="n">02</span><span class="svc-t display" style="display:block">Print Design</span><p class="svc-b">Business cards, letterheads, brochures, catalogues, packaging, decks.</p></div><span class="go">Explore <i>→</i></span></a>
-      <a class="svc" href="services#exhibition" data-acc="gold"><div><span class="n">03</span><span class="svc-t display" style="display:block">Exhibition &amp; Events</span><p class="svc-b">Exhibition panels, launch kits, backdrops, reception and stage branding.</p></div><span class="go">Explore <i>→</i></span></a>
-      <a class="svc" href="services#signage" data-acc="ink"><div><span class="n">04</span><span class="svc-t display" style="display:block">Signage &amp; Hoardings</span><p class="svc-b">Storefront boards, public hoardings, wayfinding, environmental graphics.</p></div><span class="go">Explore <i>→</i></span></a>
-      <a class="svc" href="services#3d" data-acc="bronze"><div><span class="n">05</span><span class="svc-t display" style="display:block">3D Printing</span><p class="svc-b">Branded desk items, custom awards, name tags, models and props.</p></div><span class="go">Explore <i>→</i></span></a>
-      <a class="svc" href="books" data-acc="blue"><div><span class="n">06</span><span class="svc-t display" style="display:block">Publications</span><p class="svc-b"><em>Vernacular Branding</em>, the studio's book on identity and cultural memory.</p></div><span class="go">Explore <i>→</i></span></a>
+    <div class="svc-stack">
+      <a class="svc rv" href="services#brand" data-acc="blue"><span class="n">01</span><div><span class="svc-t display" style="display:block">Brand Identity</span><p class="svc-b">Logo systems, brand guidelines, social identity and web design specs.</p></div><span class="go">Explore <i>→</i></span></a>
+      <a class="svc rv" href="services#print" data-acc="magenta"><span class="n">02</span><div><span class="svc-t display" style="display:block">Print Design</span><p class="svc-b">Business cards, letterheads, brochures, catalogues, packaging, decks.</p></div><span class="go">Explore <i>→</i></span></a>
+      <a class="svc rv" href="services#exhibition" data-acc="gold"><span class="n">03</span><div><span class="svc-t display" style="display:block">Exhibition &amp; Events</span><p class="svc-b">Exhibition panels, launch kits, backdrops, reception and stage branding.</p></div><span class="go">Explore <i>→</i></span></a>
+      <a class="svc rv" href="services#signage" data-acc="bronze"><span class="n">04</span><div><span class="svc-t display" style="display:block">Signage &amp; Hoardings</span><p class="svc-b">Storefront boards, public hoardings, wayfinding, environmental graphics.</p></div><span class="go">Explore <i>→</i></span></a>
+      <a class="svc rv" href="services#3d" data-acc="gradient"><span class="n">05</span><div><span class="svc-t display" style="display:block">3D Printing</span><p class="svc-b">Branded desk items, custom awards, name tags, models and props.</p></div><span class="go">Explore <i>→</i></span></a>
+      <a class="svc rv" href="books" data-acc="paper"><span class="n">06</span><div><span class="svc-t display" style="display:block">Publications</span><p class="svc-b"><em>Vernacular Branding</em>, the studio's book on identity and cultural memory.</p></div><span class="go">Explore <i>→</i></span></a>
     </div>
-    <div class="svc-h-bar"><span class="svc-h-fill" id="svcHFill"></span></div>
   </div>
 </section>
 
@@ -407,55 +448,6 @@ body{margin:0;font-family:"Satoshi Variable",Helvetica,Arial,sans-serif;backgrou
     });
     document.addEventListener('pointerleave',function(){glow.classList.remove('on')});
   }
-
-  /* services: horizontal scroll-stacking, pinned + translated on desktop,
-     native swipeable snap-scroll on mobile or reduced motion */
-  (function(){
-    var wrap=document.getElementById('svcHWrap'), pin=document.getElementById('svcHPin'),
-        track=document.getElementById('svcHTrack'), fill=document.getElementById('svcHFill');
-    if(!wrap||!pin||!track) return;
-    var mq = window.matchMedia('(min-width:900px)');
-    var active=false, maxScroll=0, ticking=false;
-    function layout(){
-      if(!active) return;
-      var overflow = track.scrollWidth - pin.clientWidth;
-      maxScroll = Math.max(overflow,0);
-      wrap.style.height = (window.innerHeight + maxScroll) + 'px';
-      onScroll();
-    }
-    function onScroll(){
-      if(!active || ticking) return;
-      ticking = true;
-      requestAnimationFrame(function(){
-        var rect = wrap.getBoundingClientRect();
-        var progress = maxScroll ? Math.max(0, Math.min(1, -rect.top / maxScroll)) : 0;
-        track.style.transform = 'translateX(' + (-progress*maxScroll) + 'px)';
-        if(fill) fill.style.width = (progress*100)+'%';
-        ticking = false;
-      });
-    }
-    function enable(){
-      if(active) return;
-      active = true;
-      pin.style.height='100vh'; pin.style.overflow='hidden';
-      track.style.overflowX='visible';
-      window.addEventListener('scroll',onScroll,{passive:true});
-      window.addEventListener('resize',layout);
-      layout();
-    }
-    function disable(){
-      if(!active) return;
-      active = false;
-      wrap.style.height=''; pin.style.height=''; pin.style.overflow='';
-      track.style.overflowX=''; track.style.transform='';
-      if(fill) fill.style.width='';
-      window.removeEventListener('scroll',onScroll);
-      window.removeEventListener('resize',layout);
-    }
-    function check(){ if(mq.matches && !rm) enable(); else disable(); }
-    check();
-    if(mq.addEventListener) mq.addEventListener('change',check); else mq.addListener(check);
-  })();
 
   /* touch glow: a soft ripple in the envisionar gradient on tap, for phones */
   if(!rm && window.matchMedia && matchMedia('(hover:none) and (pointer:coarse)').matches){
