@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>envisionar design atelier &#8211; envision · enhance · elevate</title>
-<meta name="description" content="Envisionar Design Atelier — Home This page requires JavaScript to display. Unpacking...">
+<meta name="description" content="Envisionar Design Atelier: brand identity, print, exhibition, signage, packaging and publication design from Nagpur, built on fifty years of applied arts practice.">
 <link rel="icon" href="assets/Envisionar-Favicon.svg">
 <style>
-
+:root{color-scheme:light}
 @font-face{font-family:"Satoshi Variable";font-style:normal;font-weight:300 900;font-display:fallback;src:url('assets/fonts/Satoshi-Variable.ttf') format('truetype');}
 @font-face{font-family:"Satoshi Variable";font-style:italic;font-weight:300 900;font-display:fallback;src:url('assets/fonts/Satoshi-VariableItalic.ttf') format('truetype');}
 @font-face{font-family:"Gambetta Variable";font-style:normal;font-weight:300 700;font-display:fallback;src:url('assets/fonts/Gambetta-Variable.ttf') format('truetype');}
@@ -27,86 +28,164 @@ body{margin:0;font-family:"Satoshi Variable",Helvetica,Arial,sans-serif;backgrou
 .site-f .l{display:flex;gap:56px;flex-wrap:wrap}
 </style>
 <style>
+/* ============ ENVISIONAR HOME — v2 ============
+   Fix applied: the old html.dark variable-flip is removed (it was never
+   toggled by any script). The real bug was --eh-blue text and a 30%-
+   opacity white label sitting directly on --eh-black panels with no
+   contrast check. Both are corrected below with solid, checked colours,
+   and color-scheme:light (declared above) stops browsers from applying
+   their own automatic dark-mode inversion on top of a light-only page,
+   the more likely source of "dark on dark" text. */
 #env-home,#env-home *,#env-home *::before,#env-home *::after{box-sizing:border-box}
-#env-home{--eh-blue:#0A00E9;--eh-black:#0E0E0E;--eh-magenta:#FF00EA;--eh-bronze:#935002;--eh-gold:#FC941A;--eh-pale:#F0F0FF;--eh-bg:#F8F8FC;--eh-surface:#fff;--eh-ink:#0E0E0E;--eh-muted:#5a5a72;--eh-border:rgba(10,0,233,.10);--eh-g1:linear-gradient(135deg,#0A00E9,#FF00EA);--eh-g2:linear-gradient(135deg,#935002,#FC941A);--eh-r:10px;--eh-gutter:clamp(16px,5vw,80px);--eh-sec:clamp(56px,7vw,96px);--eh-pad:clamp(18px,2.5vw,32px);--eh-panel:clamp(28px,4vw,48px);--eh-gap:clamp(16px,3vw,40px);font-family:'Satoshi',-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--eh-bg);color:var(--eh-ink);font-size:16px;line-height:1.7;width:100%;margin:0;overflow-x:hidden;transition:background .3s,color .3s}
-html.dark #env-home{--eh-bg:#0E0E0E;--eh-surface:#1a1a2e;--eh-ink:#F0F0FF;--eh-muted:#9090B0;--eh-pale:rgba(10,0,233,.15);--eh-border:rgba(10,0,233,.20)}
+#env-home{
+  --blue:#0A00E9; --magenta:#FF00EA; --bronze:#935002; --gold:#FC941A;
+  --ink:#0E0E0E; --paper:#FFFDF7; --panel:#fff; --muted:#5C5C6E;
+  --line:rgba(14,14,14,.10); --on-blue:#EAF0FF; --on-ink-blue:#8FA0FF;
+  --g1:linear-gradient(135deg,var(--blue),var(--magenta));
+  --gutter:clamp(18px,5vw,88px); --sec:clamp(64px,8vw,128px);
+  font-family:'Satoshi Variable',-apple-system,'Segoe UI',Roboto,sans-serif;
+  background:var(--paper); color:var(--ink); font-size:16px; line-height:1.7;
+  width:100%; margin:0; overflow-x:clip;
+}
 #env-home p{margin:0}
-#env-home h1,#env-home h2,#env-home h3{margin:0;font-weight:400}
-#env-home ul{margin:6px 0 0;padding-left:18px}
-#env-home a{text-decoration:none}
-#env-home .eh-wrap{width:100%;padding:0 var(--eh-gutter)}
-#env-home .eh-sec{padding:var(--eh-sec) 0;border-top:1px solid var(--eh-border)}
-#env-home .eh-sec:first-of-type{border-top:none}
+#env-home h1,#env-home h2,#env-home h3,#env-home h4{margin:0;font-weight:400}
+#env-home a{text-decoration:none;color:inherit}
+#env-home .wrap{width:100%;padding:0 var(--gutter)}
+#env-home .sec{padding:var(--sec) 0}
+#env-home .kick{display:flex;align-items:center;gap:10px;font:700 11px/1 'Satoshi Variable',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+#env-home .kick i{display:block;width:26px;height:1.5px;background:var(--blue)}
+#env-home .display{font-family:'Gambetta Variable',Georgia,serif;font-weight:400;letter-spacing:-.01em;text-wrap:balance}
 
-#env-home .eh-hero{background:var(--eh-black);padding:clamp(80px,10vw,120px) clamp(24px,7vw,120px);position:relative;overflow:hidden;width:100%}
-#env-home .eh-hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(10,0,233,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(10,0,233,.07) 1px,transparent 1px);background-size:68px 68px}
-#env-home .eh-hero-glow{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:clamp(200px,35vw,500px);height:clamp(200px,35vw,500px);border-radius:50%;background:radial-gradient(circle,rgba(10,0,233,.2) 0%,transparent 70%);pointer-events:none}
-#env-home .eh-hero-mark{position:absolute;right:clamp(24px,5vw,80px);top:50%;transform:translateY(-50%);opacity:.07;width:clamp(160px,26vw,360px);height:clamp(160px,26vw,360px);background:url("data:image/svg+xml;utf8,%3Csvg%20viewBox%3D'240%200%20360%20390'%20fill%3D'none'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M403.826%20325.056C392.061%20322.152%20380.446%20318.042%20369.149%20312.669C355.356%20306.388%20342.635%20297.983%20331.452%20287.754C300.11%20259.096%20284.262%20219.82%20284.382%20180.453C284.486%20145.714%20297.022%20110.905%20322.309%2083.2491C366.142%2035.3138%20434.804%2023.6223%20490.656%2049.8607C491.73%2050.3653%20492.801%2050.8833%20493.865%2051.416C497.056%2053.0142%20500.205%2054.7394%20503.302%2056.5892C511.557%2061.5253%20519.441%2067.3606%20526.815%2074.1038C537.146%2083.5521%20545.145%2095.2692%20550.182%20108.334C562.719%20140.868%20559.101%20177.42%20540.424%20206.863C507.868%20258.191%20439.867%20273.408%20388.541%20240.849L521.389%20123.701C518.426%20118.926%20515.152%20114.459%20511.609%20110.312C478.554%2071.6077%20422.14%2060.769%20376.728%2085.8491C375.105%2086.7446%20373.497%2087.6866%20371.905%2088.6751C365.536%2092.6252%20359.718%2097.1276%20354.476%20102.083C317.773%20136.764%20309.223%20193.577%20336.878%20238.159C346.816%20254.178%20360.728%20267.295%20377.2%20276.268C379.554%20277.55%20381.961%20278.747%20384.413%20279.858C387.829%20281.49%20391.277%20282.978%20394.749%20284.325C398.22%20285.672%20401.718%20286.877%20405.232%20287.941C473.192%20308.541%20547.86%20277.028%20579.428%20210.99C580.618%20208.505%20581.73%20205.991%20582.771%20203.458C598.025%20166.311%20597.373%20124.38%20580.704%2087.5792C574.342%2073.532%20565.346%2060.8362%20554.204%2050.1783C553.076%2049.0983%20551.937%2048.0365%20550.789%2046.9931C548.492%2044.9038%20546.155%2042.8854%20543.778%2040.9366C541.405%2038.9878%20538.994%2037.1086%20536.545%2035.3004C534.1%2033.4909%20531.62%2031.751%20529.104%2030.082C526.591%2028.4118%20524.046%2026.8112%20521.472%2025.2815C508.088%2017.3239%20493.908%2011.2637%20479.316%207.06559C476.197%206.16878%20473.059%205.35627%20469.908%204.63051C468.779%204.37027%20467.651%204.12348%20466.521%203.88523C463.518%203.25477%20460.505%202.70129%20457.482%202.22601C455.014%201.83625%20452.541%201.49413%20450.063%201.207C447.805%200.946755%20445.546%200.725623%20443.283%200.550904C442.824%200.515471%20442.366%200.47879%20441.907%200.447023C390.087%20-3.19152%20337.095%2015.391%20298.381%2055.8622C279.202%2075.9121%20265.553%2099.2291%20257.375%20123.927C256.623%20126.198%20255.92%20128.483%20255.26%20130.777C254.549%20133.248%20253.888%20135.732%20253.284%20138.226C244.754%20173.497%20246.975%20210.782%20259.841%20244.902C269.092%20269.442%20283.846%20292.347%20304.065%20311.687C312.893%20320.132%20322.542%20327.639%20332.849%20334.117C339.592%20338.355%20346.612%20342.157%20353.878%20345.481C433.598%20383.256%20528.206%20369.418%20593.765%20310.392V256.934C549.241%20316.673%20473.901%20342.362%20403.826%20325.056ZM364.605%20213.708C363.487%20211.507%20362.49%20209.266%20361.611%20206.993C353.126%20185.022%20355.83%20160.092%20369.212%20140.337C373.415%20134.131%20378.414%20128.786%20383.977%20124.343C408.088%20105.091%20442.837%20102.794%20469.724%20121.009L364.605%20213.708Z'%20fill%3D'%230A00E9'%3E%3C%2Fpath%3E%3C%2Fsvg%3E") center/contain no-repeat;pointer-events:none}
-#env-home .eh-hero-inner{position:relative;z-index:1;max-width:680px}
-#env-home .eh-kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--eh-blue);background:rgba(10,0,233,.15);border:1px solid rgba(10,0,233,.3);padding:5px 14px;border-radius:20px;margin-bottom:28px}
-#env-home .eh-h1{font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:clamp(44px,8vw,96px);font-weight:300;line-height:.95;color:#fff;margin-bottom:20px}
-#env-home .eh-tagline{font-family:'Poiret One',sans-serif;font-size:clamp(12px,1.8vw,18px);letter-spacing:6px;color:rgba(255,255,255,.4);margin-bottom:28px;display:block}
-#env-home .eh-hero-desc{font-size:clamp(14px,1.7vw,17px);color:rgba(255,255,255,.55);line-height:1.8;max-width:520px;margin-bottom:40px}
-#env-home .eh-stats{display:flex;gap:clamp(20px,4vw,56px);flex-wrap:wrap;padding-top:32px;border-top:1px solid rgba(255,255,255,.08)}
-#env-home .eh-stat-v{font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:clamp(26px,4vw,42px);line-height:1;margin-bottom:4px;color:#fff}
-#env-home .eh-stat-l{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.3)}
-#env-home .gm{background:var(--eh-g1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-#env-home .gg{background:var(--eh-g2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* reveal-on-scroll */
+#env-home .rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+#env-home .rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){#env-home .rv{opacity:1!important;transform:none!important;transition:none!important}}
 
-#env-home .eh-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-#env-home .eh-eyebrow b{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--eh-blue);opacity:.5}
-#env-home .eh-eyebrow span{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--eh-muted)}
-#env-home .eh-title{font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:clamp(28px,4.5vw,52px);line-height:1.1;margin-bottom:16px;color:var(--eh-ink)}
-#env-home .eh-lead{font-size:clamp(14px,1.7vw,17px);color:var(--eh-muted);line-height:1.75;max-width:640px;margin-bottom:44px}
+/* cursor glow (desktop, hover-capable only) */
+#env-glow{position:fixed;inset:0;pointer-events:none;z-index:5;opacity:0;transition:opacity .4s}
+#env-glow.on{opacity:1}
+#env-glow i{position:absolute;top:0;left:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(10,0,233,.16) 0%,rgba(255,0,234,.10) 45%,transparent 72%);
+  filter:blur(2px);transform:translate3d(-1000px,-1000px,0);will-change:transform}
 
-#env-home .eh-g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--eh-gap);align-items:start}
-#env-home .eh-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,24px)}
-#env-home .eh-card{position:relative;overflow:hidden;background:var(--eh-surface);border:1px solid var(--eh-border);border-radius:var(--eh-r);padding:var(--eh-pad);transition:transform .2s,box-shadow .2s,background .3s}
-#env-home .eh-card-hover:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(10,0,233,.10)}
-#env-home .eh-card i.eh-accent{position:absolute;top:0;left:0;right:0;height:3px;background:var(--eh-g1)}
-#env-home .eh-card-icon{font-size:28px;display:block;margin-bottom:14px;line-height:1}
-#env-home .eh-card-t{font-weight:700;font-size:14px;margin-bottom:6px;color:var(--eh-ink)}
-#env-home .eh-card-b{font-size:12px;color:var(--eh-muted);line-height:1.6;margin-bottom:12px}
-#env-home .eh-card-l{font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--eh-blue)}
+/* ---- HERO ---- */
+#env-home .hero{background:var(--ink);color:#fff;padding:clamp(120px,14vw,180px) 0 0;position:relative;overflow:hidden}
+#env-home .hero .grid-bg{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 60% at 30% 20%,#000 40%,transparent 90%)}
+#env-home .hero-in{position:relative;z-index:1;max-width:1180px}
+#env-home .hero .kick{color:rgba(255,255,255,.55)}
+#env-home .hero .kick i{background:var(--magenta)}
+#env-home .h1{font-size:clamp(46px,8.6vw,124px);line-height:.96;margin-bottom:28px}
+#env-home .h1 em{font-style:normal;background:var(--g1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#env-home .hero-desc{font-size:clamp(15px,1.8vw,19px);color:rgba(255,255,255,.68);max-width:520px;margin-bottom:40px;line-height:1.8}
+#env-home .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:clamp(56px,7vw,88px)}
+#env-home .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:100px;font:700 12.5px/1 'Satoshi Variable',sans-serif;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid transparent;transition:transform .25s,background .25s,color .25s,border-color .25s;cursor:pointer}
+#env-home .btn:hover{transform:translateY(-2px)}
+#env-home .btn-solid{background:#fff;color:var(--ink)}
+#env-home .btn-solid:hover{background:var(--magenta);color:#fff}
+#env-home .btn-line{border-color:rgba(255,255,255,.35);color:#fff}
+#env-home .btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+#env-home .btn-ink{border-color:rgba(14,14,14,.25);color:var(--ink)}
+#env-home .btn-ink:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+#env-home .btn-blue{background:var(--blue);color:#fff}
+#env-home .btn-blue:hover{background:var(--ink)}
 
-#env-home .eh-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border-radius:6px;font-size:13px;font-weight:700;letter-spacing:.5px;transition:all .2s;cursor:pointer;border:none;white-space:nowrap;font-family:'Satoshi',-apple-system,'Segoe UI',Roboto,sans-serif}
-#env-home .eh-btn-blue{background:var(--eh-blue);color:#fff}
-#env-home .eh-btn-blue:hover{opacity:.85;color:#fff}
-#env-home .eh-btn-white{background:#fff;color:var(--eh-blue)}
-#env-home .eh-btn-white:hover{opacity:.9;color:var(--eh-blue)}
-#env-home .eh-btn-outline{background:transparent;color:var(--eh-blue);border:2px solid rgba(10,0,233,.3)}
-#env-home .eh-btn-outline:hover{border-color:var(--eh-blue);background:var(--eh-pale)}
-#env-home .eh-btn-ghost{background:rgba(255,255,255,.1);color:rgba(255,255,255,.75);border:1.5px solid rgba(255,255,255,.2)}
-#env-home .eh-btn-ghost:hover{background:rgba(255,255,255,.16);color:#fff}
+/* proof strip: real work, marching, right under the hero statement */
+#env-home .proof{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.12);overflow:hidden}
+#env-home .proof-track{display:flex;width:max-content;animation:eh-run 42s linear infinite}
+#env-home .proof:hover .proof-track{animation-play-state:paused}
+#env-home .proof-set{display:flex;flex:none}
+#env-home .proof-set a{position:relative;flex:none;width:clamp(168px,20vw,240px);aspect-ratio:4/5;margin:22px 10px;overflow:hidden;border-radius:8px;display:block}
+#env-home .proof-set img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+#env-home .proof-set a:hover img{transform:scale(1.06)}
+#env-home .proof-set span{position:absolute;left:12px;right:12px;bottom:10px;color:#fff;font:700 11.5px/1.3 'Satoshi Variable',sans-serif;letter-spacing:.02em;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+@keyframes eh-run{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){#env-home .proof-track{animation:none}}
 
-#env-home .eh-quote{background:var(--eh-black);border-radius:var(--eh-r);padding:var(--eh-panel);position:relative;overflow:hidden}
-#env-home .eh-quote::before{content:'\201C';position:absolute;top:-10px;left:20px;font-family:'Gambetta',Georgia,serif;font-size:120px;line-height:1;color:var(--eh-blue);opacity:.12;pointer-events:none}
-#env-home .eh-quote p{font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:clamp(16px,2.2vw,22px);color:#fff;line-height:1.55;position:relative;z-index:1;margin-bottom:20px}
-#env-home .eh-quote .n{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--eh-blue)}
-#env-home .eh-quote .r{font-size:11px;color:rgba(255,255,255,.3)}
+/* ---- SELECTED WORK grid ---- */
+#env-home .work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+#env-home .work-head h2{font-size:clamp(30px,4.6vw,58px);line-height:1.04;max-width:16ch}
+#env-home .work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(10px,1.4vw,18px)}
+#env-home .wk{position:relative;overflow:hidden;border-radius:10px;background:#eee;display:block}
+#env-home .wk img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.16,1,.3,1);filter:saturate(1.02)}
+#env-home .wk:hover img{transform:scale(1.05)}
+#env-home .wk::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.15) 42%,transparent 62%);opacity:0;transition:opacity .35s}
+#env-home .wk:hover::after,#env-home .wk:focus-visible::after{opacity:1}
+#env-home .wk .meta{position:absolute;left:18px;right:18px;bottom:16px;color:#fff;opacity:0;transform:translateY(10px);transition:opacity .35s,transform .35s}
+#env-home .wk:hover .meta,#env-home .wk:focus-visible .meta{opacity:1;transform:none}
+#env-home .wk .meta b{display:block;font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:clamp(17px,1.7vw,22px)}
+#env-home .wk .meta span{display:block;font:600 10.5px/1 'Satoshi Variable',sans-serif;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-top:5px}
+#env-home .wk.c2{grid-column:span 3;aspect-ratio:6/5}
+#env-home .wk.c3{grid-column:span 2;aspect-ratio:4/5}
+#env-home .wk.c4{grid-column:span 4;aspect-ratio:8/5}
+@media(max-width:860px){#env-home .work-grid{grid-template-columns:repeat(2,1fr)}#env-home .wk.c2,#env-home .wk.c3,#env-home .wk.c4{grid-column:span 2;aspect-ratio:4/3}}
 
-#env-home .eh-ib{padding:clamp(16px,2.5vw,28px);border-radius:var(--eh-r);background:var(--eh-pale);border:1px solid rgba(10,0,233,.12)}
-#env-home .eh-ib h4{font-family:'Gambetta',Georgia,serif;font-size:18px;font-style:italic;margin-bottom:8px;color:var(--eh-ink)}
-#env-home .eh-ib p,#env-home .eh-ib li{font-size:13px;color:var(--eh-muted);line-height:1.7}
-#env-home .eh-ib li{margin-bottom:5px}
+/* ---- SERVICES: bold rows, not icon cards ---- */
+#env-home .svc-rows{border-top:1px solid var(--line)}
+#env-home .svc{--acc:var(--blue);position:relative;display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:clamp(14px,3vw,36px);padding:clamp(22px,3.4vw,38px) 4px;border-bottom:1px solid var(--line);overflow:hidden}
+#env-home .svc::before{content:"";position:absolute;inset:0;background:var(--acc);transform:translateX(-101%);transition:transform .45s cubic-bezier(.16,1,.3,1);z-index:0}
+#env-home .svc:hover::before,#env-home .svc:focus-within::before{transform:none}
+#env-home .svc>*{position:relative;z-index:1}
+#env-home .svc .n{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:20px;color:var(--muted);transition:color .3s}
+#env-home .svc-t{font-size:clamp(24px,3.4vw,42px);transition:color .3s}
+#env-home .svc-b{font-size:13.5px;color:var(--muted);max-width:46ch;margin-top:8px;transition:color .3s}
+#env-home .svc .go{display:inline-flex;align-items:center;gap:8px;font:700 11.5px/1 'Satoshi Variable',sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;color:var(--acc);transition:color .3s}
+#env-home .svc .go i{font-style:normal;display:inline-block;transition:transform .35s}
+#env-home .svc:hover .go i{transform:translateX(6px)}
+#env-home .svc:hover .n,#env-home .svc:hover .svc-b,#env-home .svc:hover .go{color:#fff}
+#env-home .svc:hover .svc-t{color:#fff}
+#env-home .svc[data-acc="magenta"]{--acc:var(--magenta)}
+#env-home .svc[data-acc="gold"]{--acc:var(--gold)}
+#env-home .svc[data-acc="ink"]{--acc:var(--ink)}
+#env-home .svc[data-acc="bronze"]{--acc:var(--bronze)}
+@media(max-width:640px){#env-home .svc{grid-template-columns:40px 1fr;row-gap:10px}#env-home .svc .go{grid-column:2}}
 
-#env-home .eh-step{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--eh-border)}
-#env-home .eh-step:first-child{border-top:none;padding-top:0}
-#env-home .eh-step-n{font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:36px;line-height:1;color:var(--eh-blue);opacity:.25}
-#env-home .eh-step-t{font-weight:700;font-size:14px;margin-bottom:4px;color:var(--eh-ink)}
-#env-home .eh-step-b{font-size:13px;color:var(--eh-muted);line-height:1.65}
+/* ---- STUDIO ---- */
+#env-home .studio-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start}
+#env-home .studio-quote{background:var(--ink);color:#fff;border-radius:14px;padding:clamp(28px,4vw,52px);position:relative;overflow:hidden}
+#env-home .studio-quote::before{content:'\201C';position:absolute;top:-26px;left:20px;font-family:'Gambetta Variable',Georgia,serif;font-size:180px;line-height:1;color:#fff;opacity:.06}
+#env-home .studio-quote p{position:relative;font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:clamp(18px,2.3vw,26px);line-height:1.5;margin-bottom:22px}
+#env-home .studio-quote .n{font:700 12px/1 'Satoshi Variable',sans-serif;letter-spacing:.05em;color:#fff}
+#env-home .studio-quote .r{font-size:11.5px;color:rgba(255,255,255,.62);margin-top:3px}
+#env-home .ib{margin-top:18px;padding:clamp(18px,2.5vw,26px);border-radius:12px;background:#F3F1FF;border:1px solid rgba(10,0,233,.14)}
+#env-home .ib h4{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:18px;margin-bottom:7px}
+#env-home .ib p{font-size:13.5px;color:var(--muted);line-height:1.7}
+#env-home .studio-title{font-size:clamp(30px,4.4vw,52px);line-height:1.08;margin-bottom:20px}
+#env-home .studio-p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:18px}
 
-#env-home .eh-tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;background:rgba(147,80,2,.1);color:var(--eh-bronze)}
-#env-home .eh-book{background:var(--eh-pale);border-radius:var(--eh-r);padding:var(--eh-panel);border:1px solid var(--eh-border)}
-#env-home .eh-book-t{font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:clamp(22px,3vw,34px);margin:10px 0;color:var(--eh-ink)}
-#env-home .eh-book-b{font-size:14px;color:var(--eh-muted);line-height:1.75;margin-bottom:24px}
+/* ---- PROCESS ---- */
+#env-home .steps{border-top:1px solid var(--line)}
+#env-home .step{display:grid;grid-template-columns:56px 1fr;gap:22px;padding:26px 0;border-bottom:1px solid var(--line)}
+#env-home .step-n{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:34px;color:var(--blue);opacity:.35}
+#env-home .step-t{font-weight:700;font-size:15px;margin-bottom:5px}
+#env-home .step-b{font-size:13.5px;color:var(--muted);line-height:1.7}
+#env-home .why-list{list-style:none;margin:0;padding:0}
+#env-home .why-list li{position:relative;padding:9px 0 9px 22px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+#env-home .why-list li:first-child{border-top:none}
+#env-home .why-list li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:8px;border-radius:50%;background:var(--g1)}
+#env-home .cta-mini{margin-top:22px;padding:26px;border-radius:12px;background:var(--paper);border:1px solid var(--line);text-align:center}
+#env-home .cta-mini .display{font-size:clamp(22px,3vw,32px);margin-bottom:6px}
+#env-home .cta-mini p{font-size:12.5px;color:var(--muted);margin-bottom:18px}
 
-#env-home .eh-cta{background:linear-gradient(135deg,#0A00E9,#0500AA);border-radius:var(--eh-r);padding:clamp(28px,4vw,52px);text-align:center;margin:0 0 var(--eh-sec)}
-#env-home .eh-cta h3{font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:clamp(22px,3.5vw,40px);color:#fff;margin-bottom:12px}
-#env-home .eh-cta p{font-size:15px;color:rgba(255,255,255,.55);margin:0 auto 28px;max-width:460px}
+/* ---- BOOK ---- */
+#env-home .book{position:relative;display:grid;grid-template-columns:220px 1fr;gap:clamp(24px,4vw,52px);align-items:center;background:linear-gradient(120deg,#0500B8,var(--blue));border-radius:16px;padding:clamp(26px,4vw,48px);overflow:hidden;color:#fff}
+#env-home .book::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,0,234,.35),transparent 70%)}
+#env-home .book img{width:100%;border-radius:6px;box-shadow:0 24px 60px rgba(0,0,0,.35);position:relative;z-index:1;transform:rotate(-3deg)}
+#env-home .book-c{position:relative;z-index:1}
+#env-home .book-tag{display:inline-block;padding:4px 12px;border-radius:20px;font:700 10.5px/1 'Satoshi Variable',sans-serif;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.16);margin-bottom:14px}
+#env-home .book-t{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:clamp(24px,3.4vw,38px);margin-bottom:12px}
+#env-home .book-b{font-size:14px;color:rgba(255,255,255,.82);line-height:1.8;margin-bottom:22px;max-width:56ch}
+@media(max-width:700px){#env-home .book{grid-template-columns:1fr;text-align:left}#env-home .book img{max-width:200px;margin:0 auto}}
 
-@media(max-width:900px){#env-home .eh-g3{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){#env-home .eh-g2,#env-home .eh-g3{grid-template-columns:1fr}}
+/* ---- CLOSING CTA ---- */
+#env-home .closing{background:var(--ink);color:#fff;border-radius:18px;padding:clamp(48px,7vw,96px) clamp(24px,5vw,64px);text-align:center;position:relative;overflow:hidden;margin-bottom:var(--sec)}
+#env-home .closing .grid-bg{position:absolute;inset:0;opacity:.35;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 80% at 50% 50%,#000 30%,transparent 90%)}
+#env-home .closing-in{position:relative;z-index:1}
+#env-home .closing h3{font-family:'Gambetta Variable',Georgia,serif;font-style:italic;font-size:clamp(30px,5.6vw,64px);margin-bottom:16px}
+#env-home .closing p{font-size:15px;color:rgba(255,255,255,.64);max-width:480px;margin:0 auto 30px}
+
+@media(max-width:900px){#env-home .studio-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -114,178 +193,213 @@ html.dark #env-home{--eh-bg:#0E0E0E;--eh-surface:#1a1a2e;--eh-ink:#F0F0FF;--eh-m
   <a class="t" href="./">envisionar design atelier<span class="s">envision · enhance · elevate</span></a>
   <nav><a href="./">Home</a><a href="services">Services</a><a href="portfolio">Portfolio</a><a href="books">Books</a><a href="about">About</a><a href="contact">Get a Quote</a></nav>
 </header>
+
+<div id="env-glow" aria-hidden="true"><i></i></div>
+
 <div id="env-home">
 
-<!-- ── HERO ──────────────────────────────────────────────────────────── -->
-<section class="eh-hero">
-  <div class="eh-hero-grid"></div>
-  <div class="eh-hero-glow"></div>
-  <div class="eh-hero-mark"></div>
-  <div class="eh-hero-inner">
-    <div class="eh-kicker">Nagpur · India · Est. 2024</div>
-    <h1 class="eh-h1"><span class="gm">Design that</span><br>elevates your<br>brand</h1>
-    <span class="eh-tagline">envision &nbsp;enhance &nbsp;elevate</span>
-    <p class="eh-hero-desc">Brand identity, print, exhibition, signage, packaging, publications, and 3D design — by a studio built on fifty years of applied arts expertise.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px">
-      <a href="contact" class="eh-btn eh-btn-white">Get a Free Quote</a>
-      <a href="portfolio" class="eh-btn eh-btn-ghost">View Portfolio</a>
-    </div>
-    <div class="eh-stats">
-      <div><div class="eh-stat-v">50+</div><div class="eh-stat-l">Years design experience</div></div>
-      <div><div class="eh-stat-v gm">7+</div><div class="eh-stat-l">Service categories</div></div>
-      <div><div class="eh-stat-v gg">1</div><div class="eh-stat-l">Published book</div></div>
-      <div><div class="eh-stat-v">Nagpur</div><div class="eh-stat-l">Pan-India delivery</div></div>
+<!-- ── HERO ─────────────────────────────────────────── -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="wrap hero-in">
+    <p class="kick"><i></i>Nagpur · India · Est. 2024</p>
+    <h1 class="display h1">Design that<br><em>earns</em> a second<br>look.</h1>
+    <p class="hero-desc">Brand identity, print, exhibition, signage, packaging, publications and 3D design, by a studio built on fifty years of applied arts practice.</p>
+    <div class="hero-cta">
+      <a href="contact" class="btn btn-solid">Get a Free Quote</a>
+      <a href="portfolio" class="btn btn-line">View Portfolio ↗</a>
     </div>
   </div>
-</section>
-
-<div class="eh-wrap">
-
-<!-- ── 01 · SERVICES ─────────────────────────────────────────────────── -->
-<section class="eh-sec">
-  <div class="eh-eyebrow"><b>01</b><span>What We Do</span></div>
-  <h2 class="eh-title">Every visual touchpoint<br>your brand needs</h2>
-  <p class="eh-lead">From your first logo to your exhibition stand, your business card to your highway hoarding — Envisionar covers the full spectrum of visual communication.</p>
-  <div class="eh-g3">
-    <div class="eh-card eh-card-hover">
-      <i class="eh-accent"></i>
-      <span class="eh-card-icon">🎨</span>
-      <div class="eh-card-t">Brand Identity</div>
-      <div class="eh-card-b">Logo design, full brand systems, brand guidelines, social media identity, and web design specs.</div>
-      <a href="services#brand" class="eh-card-l">Explore →</a>
-    </div>
-    <div class="eh-card eh-card-hover">
-      <i class="eh-accent"></i>
-      <span class="eh-card-icon">🖨</span>
-      <div class="eh-card-t">Print Design</div>
-      <div class="eh-card-b">Business cards, letterheads, brochures, catalogues, packaging, company profiles, presentation decks.</div>
-      <a href="services#print" class="eh-card-l">Explore →</a>
-    </div>
-    <div class="eh-card eh-card-hover">
-      <i class="eh-accent"></i>
-      <span class="eh-card-icon">🏛</span>
-      <div class="eh-card-t">Exhibition &amp; Events</div>
-      <div class="eh-card-b">Exhibition panels, software launch kits, event backdrops, reception desk design, stage branding.</div>
-      <a href="services#exhibition" class="eh-card-l">Explore →</a>
-    </div>
-    <div class="eh-card eh-card-hover">
-      <i class="eh-accent"></i>
-      <span class="eh-card-icon">🡇</span>
-      <div class="eh-card-t">Signage &amp; Hoardings</div>
-      <div class="eh-card-b">Storefront boards, public hoardings, wayfinding systems, office environmental graphics.</div>
-      <a href="services#signage" class="eh-card-l">Explore →</a>
-    </div>
-    <div class="eh-card eh-card-hover">
-      <i class="eh-accent"></i>
-      <span class="eh-card-icon">📷</span>
-      <div class="eh-card-t">3D Printing</div>
-      <div class="eh-card-b">Branded desk items, custom awards, event name tags, scale models, and exhibition props.</div>
-      <a href="services#3d" class="eh-card-l">Explore →</a>
-    </div>
-    <div class="eh-card eh-card-hover">
-      <i class="eh-accent"></i>
-      <span class="eh-card-icon">📚</span>
-      <div class="eh-card-t">Publications</div>
-      <div class="eh-card-b"><em>Vernacular Branding</em> — the studio’s book on identity and cultural memory. Buy direct.</div>
-      <a href="books" class="eh-card-l">Explore →</a>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:32px">
-    <a href="services" class="eh-btn eh-btn-blue">See all services &amp; pricing</a>
-  </div>
-</section>
-
-<!-- ── 02 · THE STUDIO ───────────────────────────────────────────────── -->
-<section class="eh-sec">
-  <div class="eh-g2">
-    <div>
-      <div class="eh-eyebrow"><b>02</b><span>The Studio</span></div>
-      <h2 class="eh-title">Design excellence<br>rooted in education</h2>
-      <p style="font-size:15px;color:var(--eh-muted);line-height:1.8;margin-bottom:18px">Envisionar Design Atelier was founded by <strong style="color:var(--eh-ink)">Prof. Bhuleshwar Mate</strong> — a retired Professor of Applied Arts and Design, Nagpur, with over fifty years in design education and practice.</p>
-      <p style="font-size:15px;color:var(--eh-muted);line-height:1.8;margin-bottom:28px">The studio brings the rigour of academic design thinking to real-world commercial projects — from a startup’s first logo to a corporation’s exhibition pavilion.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="about" class="eh-btn eh-btn-blue">Meet Prof. Mate</a>
-        <a href="https://www.bhuleshwarmate.com" target="_blank" rel="noopener" class="eh-btn eh-btn-outline">bhuleshwarmate.com ↗</a>
+  <div class="proof" aria-label="Selected work, scrolling">
+    <div class="proof-track" id="proofTrack">
+      <div class="proof-set">
+        <a href="portfolio-pages/iffi-1993"><img src="images/envisionar-iffi-1993-identity-mark-board.jpg" alt="IFFI 1993 identity mark" loading="lazy"><span>IFFI 1993</span></a>
+        <a href="portfolio-pages/datamines"><img src="images/envisionar-datamines-applied-mockups-app-web-signage.jpg" alt="Datamines applied identity" loading="lazy" style="object-position:8% 30%"><span>Datamines</span></a>
+        <a href="portfolio-pages/nap-neeru-art-printers"><img src="images/envisionar-nap-neeru-art-printers-stationery-mockup.jpg" alt="NAP stationery" loading="lazy" style="object-position:50% 78%"><span>NAP · Neeru Art Printers</span></a>
+        <a href="portfolio-pages/dr-priyas-pmc"><img src="images/envisionar-dr-priyas-pmc-clinic-brand-identity-board.jpg" alt="Dr. Priya's PMC identity" loading="lazy" style="object-position:50% 10%"><span>Dr. Priya's PMC</span></a>
+        <a href="portfolio-pages/century-travels"><img src="images/envisionar-century-travels-signage-mockup.jpg" alt="Century Travels signage" loading="lazy" style="object-position:50% 85%"><span>Century Travels</span></a>
+        <a href="portfolio-pages/mandap"><img src="images/envisionar-mandap-signage-mockup.jpg" alt="Mandap identity" loading="lazy" style="object-position:20% 25%"><span>Mandap</span></a>
+      </div>
+      <div class="proof-set" aria-hidden="true">
+        <a href="portfolio-pages/iffi-1993" tabindex="-1"><img src="images/envisionar-iffi-1993-identity-mark-board.jpg" alt="" loading="lazy"><span>IFFI 1993</span></a>
+        <a href="portfolio-pages/datamines" tabindex="-1"><img src="images/envisionar-datamines-applied-mockups-app-web-signage.jpg" alt="" loading="lazy" style="object-position:8% 30%"><span>Datamines</span></a>
+        <a href="portfolio-pages/nap-neeru-art-printers" tabindex="-1"><img src="images/envisionar-nap-neeru-art-printers-stationery-mockup.jpg" alt="" loading="lazy" style="object-position:50% 78%"><span>NAP · Neeru Art Printers</span></a>
+        <a href="portfolio-pages/dr-priyas-pmc" tabindex="-1"><img src="images/envisionar-dr-priyas-pmc-clinic-brand-identity-board.jpg" alt="" loading="lazy" style="object-position:50% 10%"><span>Dr. Priya's PMC</span></a>
+        <a href="portfolio-pages/century-travels" tabindex="-1"><img src="images/envisionar-century-travels-signage-mockup.jpg" alt="" loading="lazy" style="object-position:50% 85%"><span>Century Travels</span></a>
+        <a href="portfolio-pages/mandap" tabindex="-1"><img src="images/envisionar-mandap-signage-mockup.jpg" alt="" loading="lazy" style="object-position:20% 25%"><span>Mandap</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+<!-- ── SELECTED WORK ────────────────────────────────── -->
+<section class="sec">
+  <div class="work-head rv">
     <div>
-      <div class="eh-quote">
-        <p>A designer who has spent a lifetime understanding how India communicates — with colour, form, language, and meaning.</p>
+      <p class="kick"><i></i>Selected Work</p>
+      <h2 class="display">A studio judged<br>by what it ships.</h2>
+    </div>
+    <a href="portfolio" class="btn btn-ink">See the full portfolio ↗</a>
+  </div>
+  <div class="work-grid">
+    <a class="wk c2 rv" href="portfolio-pages/iffi-1993"><img src="images/envisionar-iffi-1993-identity-mark-board.jpg" alt="IFFI 1993" loading="lazy"><div class="meta"><b>IFFI 1993</b><span>Government of India · Identity</span></div></a>
+    <a class="wk c2 rv" href="portfolio-pages/vernacular-branding"><img src="images/envisionar-vernacular-branding-book-cover.jpg" alt="Vernacular Branding" loading="lazy"><div class="meta"><b>Vernacular Branding</b><span>Publication</span></div></a>
+    <a class="wk c2 rv" href="portfolio-pages/dr-priyas-pmc"><img src="images/envisionar-dr-priyas-pmc-clinic-brand-identity-board.jpg" alt="Dr. Priya's PMC" loading="lazy" style="object-position:50% 5%"><div class="meta"><b>Dr. Priya's PMC</b><span>Healthcare · Identity</span></div></a>
+    <a class="wk c3 rv" href="portfolio-pages/nap-neeru-art-printers"><img src="images/envisionar-nap-neeru-art-printers-stationery-mockup.jpg" alt="NAP" loading="lazy" style="object-position:50% 82%"><div class="meta"><b>NAP</b><span>Print &amp; Stationery</span></div></a>
+    <a class="wk c3 rv" href="portfolio-pages/century-travels"><img src="images/envisionar-century-travels-signage-mockup.jpg" alt="Century Travels" loading="lazy" style="object-position:50% 88%"><div class="meta"><b>Century Travels</b><span>Signage</span></div></a>
+    <a class="wk c4 rv" href="portfolio-pages/datamines"><img src="images/envisionar-datamines-applied-mockups-app-web-signage.jpg" alt="Datamines" loading="lazy" style="object-position:0% 32%"><div class="meta"><b>Datamines</b><span>Tech · Full Identity</span></div></a>
+  </div>
+</section>
+
+<!-- ── SERVICES ─────────────────────────────────────── -->
+<section class="sec">
+  <div class="rv" style="margin-bottom:clamp(28px,4vw,48px)">
+    <p class="kick"><i></i>What We Do</p>
+    <h2 class="display" style="font-size:clamp(28px,4vw,48px);max-width:18ch">Every visual touchpoint your brand needs.</h2>
+  </div>
+  <div class="svc-rows">
+    <a class="svc rv" href="services#brand" data-acc="blue"><span class="n">01</span><span><span class="svc-t display">Brand Identity</span><p class="svc-b">Logo systems, brand guidelines, social identity and web design specs.</p></span><span class="go">Explore <i>→</i></span></a>
+    <a class="svc rv" href="services#print" data-acc="magenta"><span class="n">02</span><span><span class="svc-t display">Print Design</span><p class="svc-b">Business cards, letterheads, brochures, catalogues, packaging, decks.</p></span><span class="go">Explore <i>→</i></span></a>
+    <a class="svc rv" href="services#exhibition" data-acc="gold"><span class="n">03</span><span><span class="svc-t display">Exhibition &amp; Events</span><p class="svc-b">Exhibition panels, launch kits, backdrops, reception and stage branding.</p></span><span class="go">Explore <i>→</i></span></a>
+    <a class="svc rv" href="services#signage" data-acc="ink"><span class="n">04</span><span><span class="svc-t display">Signage &amp; Hoardings</span><p class="svc-b">Storefront boards, public hoardings, wayfinding, environmental graphics.</p></span><span class="go">Explore <i>→</i></span></a>
+    <a class="svc rv" href="services#3d" data-acc="bronze"><span class="n">05</span><span><span class="svc-t display">3D Printing</span><p class="svc-b">Branded desk items, custom awards, name tags, models and props.</p></span><span class="go">Explore <i>→</i></span></a>
+    <a class="svc rv" href="books" data-acc="blue"><span class="n">06</span><span><span class="svc-t display">Publications</span><p class="svc-b"><em>Vernacular Branding</em>, the studio's book on identity and cultural memory.</p></span><span class="go">Explore <i>→</i></span></a>
+  </div>
+</section>
+
+<!-- ── THE STUDIO ───────────────────────────────────── -->
+<section class="sec">
+  <div class="studio-grid">
+    <div class="rv">
+      <p class="kick"><i></i>The Studio</p>
+      <h2 class="display studio-title">Design excellence, rooted in education.</h2>
+      <p class="studio-p">Envisionar Design Atelier was founded by <strong>Prof. Bhuleshwar Mate</strong>, a retired Professor of Applied Arts and Design, Nagpur, with over fifty years in design education and practice.</p>
+      <p class="studio-p">The studio brings the rigour of academic design thinking to real-world commercial projects, from a startup's first logo to a corporation's exhibition pavilion.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+        <a href="about" class="btn btn-blue">Meet Prof. Mate</a>
+        <a href="https://www.bhuleshwarmate.com" target="_blank" rel="noopener" class="btn btn-ink">bhuleshwarmate.com ↗</a>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="studio-quote">
+        <p>A designer who has spent a lifetime understanding how India communicates, with colour, form, language, and meaning.</p>
         <div class="n">Prof. Bhuleshwar Mate</div>
         <div class="r">Founder · Envisionar Design Atelier</div>
       </div>
-      <div class="eh-ib" style="margin-top:16px">
+      <div class="ib">
         <h4>Co-author of Vernacular Branding</h4>
-        <p>An exploration of identity, cultural memory and postcolonial representation in contemporary branding. <a href="https://www.vernacularbranding.in" target="_blank" rel="noopener" style="color:var(--eh-blue);font-weight:600">vernacularbranding.in ↗</a></p>
+        <p>An exploration of identity, cultural memory and postcolonial representation in contemporary branding. <a href="https://www.vernacularbranding.in" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">vernacularbranding.in ↗</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── 03 · HOW WE WORK ──────────────────────────────────────────────── -->
-<section class="eh-sec">
-  <div class="eh-eyebrow"><b>03</b><span>How We Work</span></div>
-  <h2 class="eh-title" style="margin-bottom:44px">Simple, transparent, professional</h2>
-  <div class="eh-g2">
-    <div>
-      <div class="eh-step">
-        <div class="eh-step-n">01</div>
-        <div><div class="eh-step-t">Brief &amp; Quote</div><div class="eh-step-b">Tell us what you need — by WhatsApp, call, or email. We respond within one working day with a clear scope and price range. No hidden costs.</div></div>
-      </div>
-      <div class="eh-step">
-        <div class="eh-step-n">02</div>
-        <div><div class="eh-step-t">Design &amp; Review</div><div class="eh-step-b">Prof. Mate personally directs every project. You receive concepts for review, with clear revision rounds included. Every file is production-ready before delivery.</div></div>
-      </div>
-      <div class="eh-step">
-        <div class="eh-step-n">03</div>
-        <div><div class="eh-step-t">Delivery &amp; Support</div><div class="eh-step-b">Final files in every format you need — CorelDRAW masters, print-ready PDFs, Figma mockups. We stay available for print coordination and follow-up.</div></div>
-      </div>
+<!-- ── HOW WE WORK ──────────────────────────────────── -->
+<section class="sec">
+  <p class="kick rv"><i></i>How We Work</p>
+  <h2 class="display rv" style="font-size:clamp(28px,4vw,48px);margin-bottom:40px">Simple, transparent, professional.</h2>
+  <div class="studio-grid">
+    <div class="steps rv">
+      <div class="step"><div class="step-n display">01</div><div><div class="step-t">Brief &amp; Quote</div><div class="step-b">Tell us what you need, by WhatsApp, call, or email. We respond within one working day with a clear scope and price range. No hidden costs.</div></div></div>
+      <div class="step"><div class="step-n display">02</div><div><div class="step-t">Design &amp; Review</div><div class="step-b">Prof. Mate personally directs every project. You receive concepts for review, with clear revision rounds included.</div></div></div>
+      <div class="step"><div class="step-n display">03</div><div><div class="step-t">Delivery &amp; Support</div><div class="step-b">Final files in every format you need: CorelDRAW masters, print-ready PDFs, Figma mockups. We stay available for print coordination.</div></div></div>
     </div>
-    <div>
-      <div class="eh-ib">
-        <h4>Why choose Envisionar?</h4>
-        <ul>
-          <li>Fifty years of design education and practice behind every decision</li>
-          <li>CorelDRAW masters delivered — your printer can use them directly</li>
-          <li>Figma mockups so you approve before anything goes to print</li>
-          <li>Google Drive project folders — all files, always accessible</li>
-          <li>In-house 3D printing for custom artefacts and awards</li>
-          <li>WhatsApp-first communication — no tickets, no delays</li>
-        </ul>
-      </div>
-      <div class="eh-card" style="margin-top:20px;padding:24px;text-align:center">
-        <div style="font-family:'Gambetta',Georgia,serif;font-style:italic;font-size:clamp(22px,3vw,36px);margin-bottom:8px;color:var(--eh-ink)">Ready to start?</div>
-        <p style="font-size:13px;color:var(--eh-muted);margin-bottom:20px">Free quote within 24 hours. No obligation.</p>
-        <a href="contact" class="eh-btn eh-btn-blue" style="width:100%">Request a Quote</a>
+    <div class="rv">
+      <ul class="why-list">
+        <li>Fifty years of design education and practice behind every decision</li>
+        <li>CorelDRAW masters delivered, your printer can use them directly</li>
+        <li>Figma mockups so you approve before anything goes to print</li>
+        <li>Google Drive project folders, all files, always accessible</li>
+        <li>In-house 3D printing for custom artefacts and awards</li>
+        <li>WhatsApp-first communication, no tickets, no delays</li>
+      </ul>
+      <div class="cta-mini">
+        <div class="display">Ready to start?</div>
+        <p>Free quote within 24 hours. No obligation.</p>
+        <a href="contact" class="btn btn-blue" style="width:100%;justify-content:center">Request a Quote</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── 04 · PUBLICATIONS ─────────────────────────────────────────────── -->
-<section class="eh-sec">
-  <div class="eh-eyebrow"><b>04</b><span>Publications</span></div>
-  <h2 class="eh-title" style="margin-bottom:44px">Design, storytelling,<br>and the books we make</h2>
-  <div class="eh-book">
-    <span class="eh-tag">Academic Book</span>
-    <div class="eh-book-t">Vernacular Branding</div>
-    <p class="eh-book-b">Co-authored by Prof. Bhuleshwar Mate and architect Kaushambi Mate — a self-published exploration of identity, cultural memory and postcolonial representation in contemporary branding.</p>
-    <a href="https://www.vernacularbranding.in" target="_blank" rel="noopener" class="eh-btn eh-btn-blue">Buy at vernacularbranding.in ↗</a>
+<!-- ── PUBLICATIONS ─────────────────────────────────── -->
+<section class="sec">
+  <p class="kick rv"><i></i>Publications</p>
+  <h2 class="display rv" style="font-size:clamp(28px,4vw,48px);margin-bottom:36px">Design, storytelling, and the books we make.</h2>
+  <div class="book rv">
+    <img src="images/envisionar-vernacular-branding-book-cover.jpg" alt="Vernacular Branding book cover">
+    <div class="book-c">
+      <span class="book-tag">Academic Book</span>
+      <div class="display book-t">Vernacular Branding</div>
+      <p class="book-b">Co-authored by Prof. Bhuleshwar Mate and Kaushambi Mate: a self-published exploration of identity, cultural memory and postcolonial representation in contemporary branding.</p>
+      <a href="https://www.vernacularbranding.in" target="_blank" rel="noopener" class="btn btn-solid" style="color:var(--blue)">Buy at vernacularbranding.in ↗</a>
+    </div>
   </div>
 </section>
 
-<!-- ── CLOSING CTA ───────────────────────────────────────────────────── -->
-<div class="eh-cta">
-  <h3>Tell us what you need</h3>
-  <p>Send a brief by WhatsApp or fill in the quote form. We respond within one working day with a clear scope and a fixed price.</p>
-  <a href="contact" class="eh-btn eh-btn-white">Request a Quote</a>
+<!-- ── CLOSING CTA ──────────────────────────────────── -->
+<div class="closing rv">
+  <div class="grid-bg"></div>
+  <div class="closing-in">
+    <h3>Tell us what you need.</h3>
+    <p>Send a brief by WhatsApp or fill in the quote form. We respond within one working day with a clear scope and a fixed price.</p>
+    <a href="contact" class="btn btn-solid" style="color:var(--ink)">Request a Quote</a>
+  </div>
 </div>
 
-</div><!-- .eh-wrap -->
-</div>
+</div><!-- .wrap -->
+</div><!-- #env-home -->
+
 <footer class="site-f">
   <div class="b"><img src="assets/Envisionar-Logo-Original-350px.svg" alt="Envisionar"><p>envision · enhance · elevate</p><p>C-7, Neeri Road, Barlinge Layout<br>Laxminagar, Nagpur, MH 440022<br>India &nbsp;·&nbsp; +91 712 222 8989</p></div>
   <div class="l"><div><h5>Services</h5><a href="services">Brand Identity</a><br><a href="services">Print Design</a><br><a href="services">Signage &amp; Hoardings</a><br><a href="services">Packaging &amp; More</a><br><a href="exhibition-events">Exhibition &amp; Events</a><br><a href="services">Digital &amp; Social</a></div><div><h5>Studio</h5><a href="portfolio">Portfolio</a><br><a href="books">Books</a><br><a href="about">About</a><br><a href="contact">Contact</a><br><a href="sitemap">Sitemap</a><br><a href="https://www.bhuleshwarmate.com/" target="_blank" rel="noopener">bhuleshwarmate.com ↗</a></div><div><h5>Publications</h5><a href="https://www.vernacularbranding.in/" target="_blank" rel="noopener">Vernacular Branding ↗</a></div><div><h5>Connect</h5><a href="https://instagram.com/atelier_envisionar" target="_blank" rel="noopener">Instagram</a><br><a href="https://in.linkedin.com/company/envisionar-design-atelier" target="_blank" rel="noopener">LinkedIn</a></div></div>
 </footer>
+
+<script>
+(function(){
+  var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* scroll reveal */
+  if('IntersectionObserver' in window){
+    var els=[].slice.call(document.querySelectorAll('.rv'));
+    var obs=new IntersectionObserver(function(entries){
+      var n=0;
+      entries.forEach(function(en){
+        if(en.isIntersecting){ var t=en.target; setTimeout(function(){t.classList.add('on')},(n++%4)*80); obs.unobserve(t); }
+      });
+    },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){obs.observe(e)});
+    setTimeout(function(){els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)e.classList.add('on')})},1200);
+  } else {
+    document.querySelectorAll('.rv').forEach(function(e){e.classList.add('on')});
+  }
+
+  /* cursor glow, desktop hover-capable only */
+  if(!rm && window.matchMedia && matchMedia('(hover:hover) and (pointer:fine)').matches){
+    var glow=document.getElementById('env-glow'), dot=glow.querySelector('i');
+    var x=0,y=0,cx=0,cy=0,raf=null;
+    function loop(){cx+=(x-cx)*.16; cy+=(y-cy)*.16; dot.style.transform='translate3d('+cx+'px,'+cy+'px,0)'; raf=requestAnimationFrame(loop);}
+    window.addEventListener('pointermove',function(e){
+      x=e.clientX; y=e.clientY;
+      if(!glow.classList.contains('on')){glow.classList.add('on'); cx=x; cy=y; if(!raf) loop();}
+    });
+    document.addEventListener('pointerleave',function(){glow.classList.remove('on')});
+  }
+
+  /* touch glow: a soft ripple in the envisionar gradient on tap, for phones */
+  if(!rm && window.matchMedia && matchMedia('(hover:none) and (pointer:coarse)').matches){
+    document.addEventListener('touchstart',function(e){
+      var t=e.touches[0]; if(!t) return;
+      var r=document.createElement('span');
+      r.style.cssText='position:fixed;z-index:9999;pointer-events:none;left:'+(t.clientX-70)+'px;top:'+(t.clientY-70)+'px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(10,0,233,.28),rgba(255,0,234,.16) 55%,transparent 75%);transform:scale(.4);opacity:.9;transition:transform .55s cubic-bezier(.16,1,.3,1),opacity .55s ease';
+      document.body.appendChild(r);
+      requestAnimationFrame(function(){r.style.transform='scale(1)';r.style.opacity='0'});
+      setTimeout(function(){r.remove()},600);
+    },{passive:true});
+  }
+})();
+</script>
 </body>
 </html>
