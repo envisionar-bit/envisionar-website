@@ -67,3 +67,13 @@
   .pal{flex-direction:column;height:auto}.pal button{min-height:70px}.pal button:hover{flex:1}
 }
 @media (prefers-reduced-motion:reduce){.phero h1 .l span{transform:none}.phero .tag{opacity:1}.stage img{transform:none}.js .pi.rv .ph{clip-path:none}}
+.pg.nat{display:block;columns:3 300px;column-gap:var(--gutter)}
+.pg.nat .pi{break-inside:avoid;margin:0 0 clamp(26px,3vw,44px);display:block}
+.pg.nat .ph{aspect-ratio:var(--ar,1080/1200)}
+.stage.fit{background:var(--soft)}
+.stage.fit img{object-fit:contain;transform:none;animation:none}
+.proj.light .phero .rule{background:rgba(0,0,0,.3)}
+.pnote{color:var(--mute);font-size:15px;max-width:60ch;margin-top:18px}
+.cred{list-style:none;margin:0;padding:0;max-width:70ch;color:var(--mute)}
+.cred li{padding:8px 0;border-top:1px solid var(--line)}
+.cred li:first-child{border-top:0}
