@@ -36,8 +36,7 @@ p{margin:0}h1,h2,h3{margin:0;font-weight:700}
 .mark:hover{transform:rotate(90deg) scale(1.25)}
 .menu-btn{position:fixed;top:16px;right:var(--gutter);z-index:60;background:var(--ink);color:#fff;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:6px 14px 7px;border-radius:99px;transition:background .2s,transform .3s var(--ease)}
 .menu-btn:hover{background:var(--accent);transform:scale(1.06)}
-.ghost{position:fixed;bottom:4px;z-index:0;pointer-events:none;font-weight:800;letter-spacing:-.07em;line-height:.8;font-size:clamp(2rem,3.6vw,3.6rem);color:var(--ghost);user-select:none}
-.ghost.l{left:var(--gutter)}.ghost.r{right:var(--gutter)}
+.ghost{position:fixed;left:var(--gutter);bottom:6px;z-index:0;pointer-events:none;width:clamp(150px,16vw,260px);aspect-ratio:600/84;background:var(--ghost);-webkit-mask:url(assets/Envisionar-Logo-Original-350px.svg) left bottom/100% auto no-repeat;mask:url(assets/Envisionar-Logo-Original-350px.svg) left bottom/100% auto no-repeat}
 main,footer{position:relative;z-index:1}
 .overlay{position:fixed;inset:0;z-index:55;background:var(--paper);padding:72px var(--gutter) 24px;overflow-y:auto;transform:translateY(-100%);visibility:hidden;transition:transform .6s cubic-bezier(.7,0,.2,1),visibility 0s .6s}
 .overlay.open{transform:none;visibility:visible;transition-delay:0s}
@@ -120,6 +119,7 @@ a:hover>.arrow,.pill:hover .arrow{transform:translate(3px,-3px)}
 .w .ph{position:relative;overflow:hidden;aspect-ratio:var(--ar,4/5);background:var(--soft)}
 .w img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
 .w:hover img{transform:scale(1.06)}
+@media (min-width:901px){.w.r{grid-column:8/span 4}}
 .js .w.rv .ph{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s var(--ease);transition-delay:var(--d,0s)}
 .js .w.rv.in .ph{clip-path:inset(0)}
 .w .cap{display:flex;gap:10px;align-items:baseline;margin-top:11px;font-weight:700;font-size:15px}
@@ -237,6 +237,7 @@ footer{background:var(--paper);border-top:1px solid var(--ink);padding:26px 0 90
   .sec-head .kicker{display:none}.sec-head .h2{grid-column:3}
   .w{grid-column:span 12}
   .w.half{grid-column:span 6}
+  .w.r{grid-column:span 6}
   .svc li a{grid-template-columns:1fr 36px}.svc li a p{display:none}
   .studio .txt{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}.promise{grid-template-columns:1fr}
@@ -258,8 +259,7 @@ footer{background:var(--paper);border-top:1px solid var(--ink);padding:26px 0 90
 
 <a class="mark" href="./" aria-label="Home" title="Home"></a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-<div class="ghost l" aria-hidden="true">envision</div>
-<div class="ghost r" aria-hidden="true">ar</div>
+<div class="ghost" aria-hidden="true"></div>
 
 <nav class="overlay" id="menu" aria-label="Site">
   <div class="overlay-in">
@@ -350,23 +350,22 @@ footer{background:var(--paper);border-top:1px solid var(--ink);padding:26px 0 90
     <div class="frame wide">
       <div class="grid">
         <a class="w rv" style="--s:8;--ar:16/10" href="portfolio-pages/datamines"><div class="ph"><img src="images/web/datamines-applied-mockups-app-web-signage.jpg" alt="Datamines identity applied across app, web and signage" loading="lazy"></div><p class="cap"><sup>01</sup><b>Datamines</b><em>Technology · Full identity</em></p></a>
-        <a class="w rv d1" style="--s:4;--ar:4/5" href="portfolio-pages/dr-priyas-pmc"><div class="ph"><img src="images/web/dr-priyas-pmc-app-screen-mockup.jpg" alt="Dr. Priya's PMC app screens" loading="lazy"></div><p class="cap"><sup>02</sup><b>Dr. Priya's PMC</b><em>Healthcare</em></p></a>
+        <a class="w rv d1" style="--s:4;--ar:4/5" href="portfolio-pages/dr-priyas-pmc"><div class="ph"><img src="images/web/dr-priyas-pmc-app-screen-clean.jpg" style="object-fit:contain;background:#fd3a41" alt="Dr. Priya's PMC app screens" loading="lazy"></div><p class="cap"><sup>02</sup><b>Dr. Priya's Clinic</b><em>Healthcare</em></p></a>
 
         <a class="w half rv" style="--s:4;--ar:4/5" href="portfolio-pages/century-travels"><div class="ph"><img src="images/web/century-travels-print-collateral-mockup.jpg" alt="Century Travels print collateral" loading="lazy"></div><p class="cap"><sup>03</sup><b>Century Travels</b><em>Signage</em></p></a>
-        <a class="w half rv d1" style="--s:4;--ar:4/5" href="portfolio-pages/iffi-1993"><div class="ph"><img src="images/web/iffi-1993-catalogue-cover-mockup.jpg" alt="IFFI 1993 catalogue cover" loading="lazy"></div><p class="cap"><sup>04</sup><b>IFFI 1993</b><em>Government</em></p></a>
-        <a class="w rv d2" style="--s:4;--ar:4/5" href="portfolio-pages/ajmera-tyre"><div class="ph"><img src="images/web/ajmera-tyre-vision-card-brochure-outside-1.jpg" alt="Ajmera Tyre vision card brochure" loading="lazy"></div><p class="cap"><sup>05</sup><b>Ajmera Tyre</b><em>Print</em></p></a>
+        <a class="w half rv d1" style="--s:4;--ar:4/5" href="portfolio-pages/iffi-1993"><div class="ph"><img src="images/web/iffi-1993-covers.jpg" alt="IFFI 1993 catalogue cover" loading="lazy"></div><p class="cap"><sup>04</sup><b>IFFI 1993</b><em>Government</em></p></a>
+        <a class="w rv d2" style="--s:4;--ar:4/5" href="portfolio-pages/ajmera-tyre"><div class="ph"><img src="images/web/ajmera-tyre-vision-cards.jpg" alt="Ajmera Tyre vision card brochure" loading="lazy"></div><p class="cap"><sup>05</sup><b>Ajmera Tyre</b><em>Print</em></p></a>
 
         <a class="w rv" style="--s:5;--ar:4/3" href="portfolio-pages/headstart"><div class="ph"><img src="images/web/headstart-billboard-mockup.jpg" alt="Headstart billboard" loading="lazy"></div><p class="cap"><sup>06</sup><b>Headstart</b><em>Outdoor</em></p></a>
         <a class="w rv d1" style="--s:7;--ar:16/10" href="portfolio-pages/easytax"><div class="ph"><img src="images/web/easytax-ipad-display-mockup.jpg" alt="Easytax identity on tablet and phone" loading="lazy"></div><p class="cap"><sup>07</sup><b>Easytax</b><em>Finance · App &amp; web</em></p></a>
 
-        <a class="w half rv" style="--s:4;--ar:1/1" href="portfolio-pages/baidyanath"><div class="ph"><img src="images/web/baidyanath-gudi-padwa-advertisement.jpg" alt="Baidyanath Gudi Padwa advertisement" loading="lazy"></div><p class="cap"><sup>08</sup><b>Baidyanath</b><em>Advertising</em></p></a>
-        <a class="w half rv d1" style="--s:4;--ar:1/1" href="portfolio-pages/mandap"><div class="ph"><img src="images/web/mandap-card-mockup.jpg" alt="Mandap card mockup" loading="lazy"></div><p class="cap"><sup>09</sup><b>Mandap</b><em>Identity</em></p></a>
-        <a class="w rv d2" style="--s:4;--ar:1/1" href="portfolio-pages/saj-jewellers"><div class="ph"><img src="images/web/saj-jewellers-collateral-mockup-1.jpg" alt="SAJ Jewellers collateral" loading="lazy"></div><p class="cap"><sup>10</sup><b>SAJ Jewellers</b><em>Retail</em></p></a>
+        <a class="w half rv" style="--s:5;--ar:12/11" href="portfolio-pages/mandap"><div class="ph"><img src="images/web/mandap-card-clean.jpg" alt="Mandap card mockup" loading="lazy"></div><p class="cap"><sup>08</sup><b>Mandap</b><em>Identity</em></p></a>
+        <a class="w half r rv d1" style="--s:4;--ar:4/5" href="portfolio-pages/saj-jewellers"><div class="ph"><img src="images/web/saj-jewellers-collateral-mockup-1.jpg" alt="SAJ Jewellers collateral" loading="lazy"></div><p class="cap"><sup>09</sup><b>SAJ Jewellers</b><em>Retail</em></p></a>
 
-        <a class="w rv" style="--s:6;--ar:4/3" href="portfolio-pages/maha-handloom"><div class="ph"><img src="images/web/maha-handloom-collateral-mockup.jpg" alt="Maha Handloom collateral" loading="lazy"></div><p class="cap"><sup>11</sup><b>Maha Handloom</b><em>Textile · Identity</em></p></a>
-        <a class="w rv d1" style="--s:6;--ar:4/3" href="portfolio-pages/nap-neeru-art-printers"><div class="ph"><img src="images/web/nap-neeru-art-printers-stationery-mockup.jpg" alt="NAP stationery" loading="lazy"></div><p class="cap"><sup>12</sup><b>NAP · Neeru Art Printers</b><em>Print</em></p></a>
+        <a class="w rv" style="--s:6;--ar:3/2" href="portfolio-pages/maha-handloom"><div class="ph"><img src="images/web/maha-handloom-poster.jpg" alt="Maha Handloom collateral" loading="lazy"></div><p class="cap"><sup>10</sup><b>Maha Handloom</b><em>Textile · Identity</em></p></a>
+        <a class="w rv d1" style="--s:6;--ar:3/2" href="portfolio-pages/nap-neeru-art-printers"><div class="ph"><img src="images/web/nap-stage-screen.jpg" alt="NAP stationery" loading="lazy"></div><p class="cap"><sup>11</sup><b>NAP · Neeru Art Printers</b><em>Print</em></p></a>
       </div>
-      <div class="more-row rv"><span>12 selected projects</span><a class="pill blue" href="portfolio">Full portfolio <span class="arrow">↗</span></a></div>
+      <div class="more-row rv"><span>11 selected projects</span><a class="pill blue" href="portfolio">Full portfolio <span class="arrow">↗</span></a></div>
     </div>
   </section>
 
@@ -380,11 +379,11 @@ footer{background:var(--paper);border-top:1px solid var(--ink);padding:26px 0 90
       <div class="svc">
         <ol>
           <li class="rv"><a href="services#brand" data-peek="images/web/easytax-brand-identity-board.jpg"><h3><sup>01</sup>Brand identity</h3><p>Logo systems, brand guidelines, social identity and web design specs.</p><span class="go">→</span></a></li>
-          <li class="rv"><a href="services#print" data-peek="images/web/nap-neeru-art-printers-stationery-mockup.jpg"><h3><sup>02</sup>Print design</h3><p>Business cards, letterheads, brochures, catalogues, packaging, decks.</p><span class="go">→</span></a></li>
+          <li class="rv"><a href="services#print" data-peek="images/web/nap-stage-screen.jpg"><h3><sup>02</sup>Print design</h3><p>Business cards, letterheads, brochures, catalogues, packaging, decks.</p><span class="go">→</span></a></li>
           <li class="rv"><a href="services#exhibition" data-peek="images/web/iffi-1993-festival-information-page.jpg"><h3><sup>03</sup>Exhibition &amp; events</h3><p>Exhibition panels, launch kits, backdrops, reception and stage branding.</p><span class="go">→</span></a></li>
           <li class="rv"><a href="services#signage" data-peek="images/web/century-travels-signage-mockup.jpg"><h3><sup>04</sup>Signage &amp; hoardings</h3><p>Storefront boards, public hoardings, wayfinding, environmental graphics.</p><span class="go">→</span></a></li>
-          <li class="rv"><a href="services#3d" data-peek="images/web/sandi-sandi-plus-render.jpg"><h3><sup>05</sup>3D printing</h3><p>Branded desk items, custom awards, name tags, models and props.</p><span class="go">→</span></a></li>
-          <li class="rv"><a href="books" data-peek="images/web/vernacular-branding-book-cover.jpg"><h3><sup>06</sup>Publications</h3><p>Vernacular Branding, the studio's book on identity and cultural memory.</p><span class="go">→</span></a></li>
+          <li class="rv"><a href="services#3d" data-peek="images/web/3d-printing-vernacular-parts.jpg"><h3><sup>05</sup>3D printing</h3><p>Branded desk items, custom awards, name tags, models and props.</p><span class="go">→</span></a></li>
+          <li class="rv"><a href="books" data-peek="images/web/vb-page-19-spread.jpg"><h3><sup>06</sup>Publications</h3><p>Vernacular Branding, the studio's book on identity and cultural memory.</p><span class="go">→</span></a></li>
         </ol>
       </div>
     </div>
