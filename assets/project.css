@@ -10,7 +10,7 @@
 .phero .cat{grid-column:3;grid-row:1;font-weight:700;padding-right:90px;padding-top:2px}
 .phero .cat i{font-style:normal;opacity:.6}
 .phero h1{grid-column:3;grid-row:2;align-self:end;font-size:clamp(3.4rem,12.5vw,12rem);line-height:.84;letter-spacing:var(--tight);font-weight:700;margin:clamp(40px,6vw,80px) 0 0}
-.phero h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+.phero h1 .l{display:block;overflow:hidden;padding-bottom:.2em;margin-bottom:-.12em}
 .phero h1 .l span{display:block;transform:translateY(105%);animation:up 1.2s var(--ease) .1s forwards}
 @keyframes up{to{transform:none}}
 .phero .tag{grid-column:3;grid-row:3;margin:22px 0 clamp(36px,5vw,64px);font-family:"Gambetta Variable",Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(1.4rem,2.8vw,2.6rem);line-height:1.1;color:var(--pa);max-width:26ch;opacity:0;animation:fadeup 1s var(--ease) .7s forwards}
@@ -71,7 +71,8 @@
 .pg.nat .pi{break-inside:avoid;margin:0 0 clamp(26px,3vw,44px);display:block}
 .pg.nat .ph{aspect-ratio:var(--ar,1080/1200)}
 .stage.fit{background:var(--soft)}
-.stage.fit img{object-fit:contain;transform:none;animation:none}
+.stage.fit{display:grid;place-items:center;padding:clamp(24px,5vw,64px) 0 0}
+.stage.fit img{width:auto;height:auto;max-width:min(100%,var(--nw,100%));max-height:100%;object-fit:contain;transform:none;animation:none}
 .proj.light .phero .rule{background:rgba(0,0,0,.3)}
 .pnote{color:var(--mute);font-size:15px;max-width:60ch;margin-top:18px}
 .cred{list-style:none;margin:0;padding:0;max-width:70ch;color:var(--mute)}

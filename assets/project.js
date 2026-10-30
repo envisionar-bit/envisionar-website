@@ -1,4 +1,17 @@
 (()=>{
+  // shrink the title until its longest word fits the column
+  const h=document.querySelector('.phero h1 .l');
+  if(!h)return;
+  const fit=()=>{
+    h.style.fontSize='';
+    let fs=parseFloat(getComputedStyle(h).fontSize),n=0;
+    while(h.scrollWidth>h.clientWidth+1&&n++<40){fs*=.96;h.style.fontSize=fs+'px'}
+  };
+  fit();
+  addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+})();
+(()=>{
   // click a swatch to copy its hex
   const note=document.querySelector('.pal-note');
   document.querySelectorAll('.pal button').forEach(b=>b.addEventListener('click',()=>{
