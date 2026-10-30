@@ -191,3 +191,4 @@
 .job ul li{display:block;position:relative;padding-left:22px}
 .job ul li::before{position:absolute;left:0}
 .book-feat .txt{position:sticky;top:20px}
+.role+.role{margin-top:clamp(40px,6vw,90px)}.role .job{border-top:0;padding-top:0}
