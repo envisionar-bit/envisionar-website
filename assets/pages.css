@@ -193,3 +193,16 @@
 .job ul li::before{position:absolute;left:0}
 .book-feat .txt{position:sticky;top:20px}
 .role+.role{margin-top:clamp(40px,6vw,90px)}.role .job{border-top:0;padding-top:0}
+.bi-logos{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)}
+.bi-tile{background:#fff;border:1px solid var(--line);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
+.bi-tile.soft{background:var(--soft);border-color:transparent}
+.bi-tile img{width:46%;height:auto}.bi-tile.mk img{width:22%}
+.bi-tile span{position:absolute;left:12px;bottom:10px;font-size:13px;color:var(--mute);font-weight:500}
+.bi-pal{display:grid;grid-template-columns:repeat(5,1fr);gap:0;min-height:clamp(180px,24vw,300px)}
+.bi-pal div{padding:14px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px}
+.bi-pal small{opacity:.75;font-weight:500}
+.bi-type{display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter)}
+.bi-type small{color:var(--mute);font-weight:500}
+.bi-type .s1{font-size:clamp(2.4rem,6vw,5.4rem);font-weight:700;letter-spacing:-.055em;line-height:.95;margin-top:10px}
+.bi-type .s2{font-family:"Gambetta Variable",Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(2.4rem,6vw,5.4rem);line-height:.95;margin-top:10px;color:var(--accent)}
+@media (max-width:900px){.bi-logos,.bi-type{grid-template-columns:1fr}.bi-pal{grid-template-columns:1fr 1fr}}
