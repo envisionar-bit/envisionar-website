@@ -238,3 +238,6 @@
 .bg-web .w1{background:#fff;color:#0e0e0e}.bg-web .w2{background:#0a00e9;color:#fff;border-color:transparent}.bg-web .w3{background:#0e0e0e;color:#fc941a;border-color:transparent}.bg-web .w4{background:#0e0e0e;color:#fff;border-color:transparent}
 .bg-web .w3 img,.bg-web .w4 img,.bg-web .w2 img{filter:brightness(0) invert(1)}
 @media (max-width:900px){.bg-row,.bg-row.two,.bg-row.six,.bg-cols3,.bg-col,.bg-grads,.bg-dont,.bg-type{grid-template-columns:1fr}.bg-web{grid-template-columns:1fr 1fr}.bg-scale div{grid-template-columns:1fr}}
+
+@media (max-width:520px){.big{min-width:0}.big strong{font-size:1.15rem;overflow-wrap:anywhere}}
+@media (max-width:520px){.drow{grid-template-columns:1fr;gap:2px}.drow dd{overflow-wrap:anywhere}.body-cols .content{min-width:0}}
